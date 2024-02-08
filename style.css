@@ -9,6 +9,16 @@ body.intro {
     background-color: #2b262d;
 }
 
+.introH1 {
+    color: white;
+    display: block;
+    top: 100px;
+    text-align: center;
+    top: 100px;
+    position: relative;
+    font-size: 50px;
+}
+
 .footer{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
