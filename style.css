@@ -5,13 +5,6 @@
     box-sizing: border-box;
 }
 
-
-
-
-
-
-
-
 .footer{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
