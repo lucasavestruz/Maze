@@ -39,10 +39,15 @@ body.intro {
 .drevet_av{
     grid-column-start: 2;
     grid-column-end: 3;
+    font-size: 15px;
 }
 
 .om_oss{
     grid-column-start: 3;
     grid-column-end: 4;
     margin: auto;
+}
+
+.td_footer{
+    padding: 10px;
 }
