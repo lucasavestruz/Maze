@@ -5,3 +5,11 @@
     box-sizing: border-box;
 }
 
+body.intro {
+    background-color: #2b262d;
+}
+
+.om_oss{
+    grid-column-start: 3;
+    grid-column-end: 4;
+}
