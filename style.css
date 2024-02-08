@@ -48,6 +48,11 @@ body.intro {
     margin: auto;
 }
 
+.om_oss a{
+    text-decoration: none;
+    color: black;
+}
+
 .td_footer{
     padding: 10px;
 }
