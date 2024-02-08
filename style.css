@@ -9,6 +9,24 @@ body.intro {
     background-color: #2b262d;
 }
 
+.footer{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    position: absolute;
+    bottom: 0;
+    background-color: darkgray;
+}
+
+.arstall{
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+
+.drevet_av{
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+
 .om_oss{
     grid-column-start: 3;
     grid-column-end: 4;
