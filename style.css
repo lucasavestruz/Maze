@@ -8,14 +8,12 @@
 
 
 
-
-
-
-
 .footer{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-
+    position: absolute;
+    bottom: 0;
+    background-color: darkgray;
 }
 
 .arstall{
