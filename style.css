@@ -80,3 +80,11 @@ section {
     min-height: 100vh;
     transition-delay: 1.2s;
 }
+
+.gate {
+	align-self: center;
+	margin: auto;
+	width: 60%;
+	height: 80%;
+
+}
