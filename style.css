@@ -51,3 +51,7 @@ body.intro {
 .td_footer{
     padding: 10px;
 }
+
+canvas {
+    border: 1px solid black;
+}
