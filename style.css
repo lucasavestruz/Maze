@@ -67,3 +67,11 @@ canvas {
     height: 100%;
     clip-path: circle(24.4% at 50% 50%);
 }
+
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    transition-delay: 1.2s;
+}
