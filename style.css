@@ -60,3 +60,9 @@ body.intro {
 canvas {
     border: 1px solid black;
 }
+
+.clipPath-Overgang {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
