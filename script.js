@@ -7,5 +7,5 @@ port.addEventListener("click", () => {
     section.style.background = black;
     portal.style.background = black;
 
-}
+})
 
