@@ -1,7 +1,8 @@
-const portal = document.querySelector('.clipPath-overgang');
-const section = document.querySelector('.sec');
+const port = document.querySelector("#gateFlex")
+const portal = document.querySelector(".clipPath-overgang");
+const section = document.querySelector(".sec");
 
-element.addEventListener("click", () => {
+port.addEventListener("click", () => {
     fargeOvergang = document.querySelector('fargeOvergang-input').value;
     section.style.background = black;
     portal.style.background = black;
