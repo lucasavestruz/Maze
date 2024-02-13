@@ -22,7 +22,6 @@ body.intro {
 .footer{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    position: absolute;
     bottom: 0;
     background-color: darkgray;
     border-top: 5px solid black;
@@ -85,7 +84,6 @@ section {
 #gateFlex {
     justify-content: center;
     display: flex;
-
 }
 
 #gate {
@@ -114,8 +112,11 @@ section {
 
 .kontakt_container{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     gap: 5px;
+    width: 500px;
+    margin: auto;
+    height: 300px;
 }
 
 .navn_kontakt{
