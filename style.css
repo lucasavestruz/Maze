@@ -61,6 +61,42 @@ canvas {
     border: 1px solid black;
 }
 
+
+.clipPath-overgang {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transition: clip-path 1.2s linear;
+    clip-path: circle(24.4% at 50% 50%);
+    
+}
+.clipPath-overgang.aktiv {
+    clip-path: circle(70.7% at 50% 50%);
+}
+
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    transition-delay: 1.2s;
+}
+
+#gateFlex {
+    justify-content: center;
+    display: flex;
+
+}
+
+#gate {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 30%;
+    cursor: pointer;
+}
+
+
 .body_kontakt{
     background-color: lightsteelblue;
 }
