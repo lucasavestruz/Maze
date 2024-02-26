@@ -22,7 +22,6 @@ body.intro {
 .footer{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    position: absolute;
     bottom: 0;
     background-color: darkgray;
     border-top: 5px solid black;
@@ -42,11 +41,6 @@ body.intro {
     font-size: 15px;
 }
 
-.kontakt{
-    grid-column-start: 3;
-    grid-column-end: 4;
-    margin: auto;
-}
 
 .om_oss a{
     text-decoration: none;
@@ -64,17 +58,21 @@ canvas {
 /* Overgang */
 
 .clipPath-overgang {
-    position: absolute;
+    position: fixed; /* Endret fra absolute til fixed for å dekke hele siden */
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
-    transition: clip-path 1.2s linear;
-    clip-path: circle(24.4% at 50% 50%);
-    
-}
-.clipPath-overgang.aktiv {
-    clip-path: circle(70.7% at 50% 50%);
+    background-color: black; /* Fargen som brer seg */
+    clip-path: circle(0% at 50% 50%); /* Start med en sirkel som ikke vises */
+    pointer-events: none; /* Forhindre at elementet fanger klikk */
+    z-index: 10; /* Sørg for at den ligger over andre elementer */
 }
 
+.clipPath-overgang.aktiv {
+    clip-path: circle(80% at 50% 50%); /* Utvider seg til å dekke hele skjermen */
+    transition: clip-path 1.2s linear; /* Glidende overgang */
+}
 section {
     display: flex;
     justify-content: center;
@@ -83,99 +81,16 @@ section {
     transition-delay: 1.2s;
 }
 
-#gateFlex {
-    justify-content: center;
-    display: flex;
-
-}
-
 #gate {
+    background-color: black;
     position: relative;
-    display: flex;
     justify-content: center;
     width: 30%;
     cursor: pointer;
 }
 
 
-.body_kontakt{
-    background-color: lightsteelblue;
-}
 
-.kontakt_h1{
-    text-align: center;
-    font-size: 100px;
-    margin: 40px;
-}
-
-.p_kontakt{
-    text-align: center;
-    margin: 30px;
-}
-
-.kontakt_container{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-    gap: 5px;
-}
-
-.navn_kontakt{
-    grid-column-start: 1;
-    grid-column-end: 3;
-    border: 3px solid black;
-}
-
-.telefonnummer_kontakt{
-    grid-column-start: 3;
-    grid-column-end: 6;
-    border: 3px solid black;
-}
-
-.epost_kontakt{
-    grid-row-start: 2;
-    grid-row-end: 3;
-    grid-column-start: 1;
-    grid-column-end: 6;
-    border: 3px solid black;
-}
-
-.kommentar_kontakt{
-    grid-row-start: 3;
-    grid-row-end: 4;
-    grid-column-start: 1;
-    grid-column-end: 6;
-    height: 100px;
-    border: 3px solid black;
-}
-
-.send_kontakt{
-    grid-row-start: 4;
-    grid-row-end: 5;
-    grid-column-start: 1;
-    grid-column-end: 2;
-    border: 3px solid black;
-    background-color:  #e3fc03;
-}
-
-.navn_kontakt:hover {
-    border-color: white;
-}
-
-.telefonnummer_kontakt:hover {
-    border-color: white;
-}
-
-.epost_kontakt:hover {
-    border-color: white;
-}
-
-.kommentar_kontakt:hover {
-    border-color: white;
-}
-
-.send_kontakt:hover {
-    border-color: white;
-}
 
 .maze_body {
     display: grid;
