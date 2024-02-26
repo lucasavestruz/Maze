@@ -82,14 +82,9 @@ section {
     transition-delay: 1.2s;
 }
 
-#gateFlex {
-    justify-content: center;
-    display: flex;
-}
-
 #gate {
+    background-color: black;
     position: relative;
-    display: flex;
     justify-content: center;
     width: 30%;
     cursor: pointer;
