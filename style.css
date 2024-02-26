@@ -70,7 +70,7 @@ canvas {
 }
 
 .clipPath-overgang.aktiv {
-    clip-path: circle(150% at 50% 50%); /* Utvider seg til å dekke hele skjermen */
+    clip-path: circle(80% at 50% 50%); /* Utvider seg til å dekke hele skjermen */
     transition: clip-path 1.2s linear; /* Glidende overgang */
 }
 section {
