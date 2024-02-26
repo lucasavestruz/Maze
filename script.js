@@ -22,8 +22,8 @@ for (i = 0; i < 10; i++) {
 
 const movableElement = document.getElementById('prikk');
 
-let positionX = 1133;
-let positionY = 150;
+let positionX = 10;
+let positionY = 50;
 const moveSpeed = 60;
 
 const row = positionY / moveSpeed;
@@ -38,13 +38,13 @@ document.addEventListener('keydown', (event) => {
             positionY += moveSpeed;
             break;
         case 'ArrowLeft':
-            positionX -= moveSpeed;
-            break;
-        case 'ArrowRight':
             positionX += moveSpeed;
             break;
+        case 'ArrowRight':
+            positionX -= moveSpeed;
+            break;
     }
-    movableElement.style.left = positionX + 'px';
+    movableElement.style.right = positionX + 'px';
     movableElement.style.top = positionY + 'px';
 });
 
