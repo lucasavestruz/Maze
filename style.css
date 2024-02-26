@@ -63,17 +63,21 @@ canvas {
 /* Overgang */
 
 .clipPath-overgang {
-    position: absolute;
+    position: fixed; /* Endret fra absolute til fixed for å dekke hele siden */
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
-    transition: clip-path 1.2s linear;
-    clip-path: circle(24.4% at 50% 50%);
-    
-}
-.clipPath-overgang.aktiv {
-    clip-path: circle(70.7% at 50% 50%);
+    background-color: black; /* Fargen som brer seg */
+    clip-path: circle(0% at 50% 50%); /* Start med en sirkel som ikke vises */
+    pointer-events: none; /* Forhindre at elementet fanger klikk */
+    z-index: 10; /* Sørg for at den ligger over andre elementer */
 }
 
+.clipPath-overgang.aktiv {
+    clip-path: circle(150% at 50% 50%); /* Utvider seg til å dekke hele skjermen */
+    transition: clip-path 1.2s linear; /* Glidende overgang */
+}
 section {
     display: flex;
     justify-content: center;
