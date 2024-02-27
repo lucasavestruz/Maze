@@ -83,7 +83,6 @@ canvas {
 #gate {
     background-color: black;
     position: relative;
-    justify-content: center;
     width: 30%;
     cursor: pointer;
 }
