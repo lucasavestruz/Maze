@@ -73,14 +73,13 @@ canvas {
     clip-path: circle(80% at 50% 50%);
     transition: clip-path 1.2s linear; 
 }
-section {
+.sec {
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
     transition-delay: 1.2s;
 }
-
 #gate {
     background-color: black;
     position: relative;
