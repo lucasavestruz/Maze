@@ -4,8 +4,8 @@ const body = document.querySelector("body");
 
 port.addEventListener("click", () => {   
     portal.classList.add("aktiv");
-    const body_portal=document.querySelectorAll(".body_portal")
-    const body_maze=document.querySelectorAll(".body_maze")
+    let body_portal=document.querySelector(".body_portal")
+    let body_maze=document.querySelector(".body_maze")
     setTimeout(() => {
         body.style.backgroundColor = "black";
     }, 1200); 
