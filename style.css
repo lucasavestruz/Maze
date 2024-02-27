@@ -89,3 +89,10 @@ canvas {
 
 
 
+.body_index{
+    display: block;
+  }
+
+  .body_maze{
+    display: none;
+  }
