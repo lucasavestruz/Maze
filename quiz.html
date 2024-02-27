@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flervalgsquiz</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        #quiz-container {
+            max-width: 600px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+
+        .sporsmal1 {
+            margin: 10px;
+            padding: 30px;
+            grid-column-start: 1;
+            grid-column-end: 2;
+            border: 2px solid black;
+        }
+
+        .sporsmal2 {
+            margin: 10px;
+            padding: 30px;
+            grid-column-start: 2;
+            grid-column-end: 3;
+            border: 2px solid black;
+        }
+
+        .sporsmal3 {
+            margin: 10px;
+            padding: 30px;
+            grid-column-start: 1;
+            grid-column-end: 2;
+            grid-row-start: 2;
+            grid-row-end: 3;
+            border: 2px solid black;
+        }
+
+        .sporsmal4 {
+            margin: 10px;
+            padding: 30px;
+            grid-column-start: 2;
+            grid-column-end: 3;
+            grid-row-start: 2;
+            grid-row-end: 3;
+            border: 2px solid black;
+        }
+
+        .sporsmal5 {
+            margin: 10px;
+            padding: 30px;
+            grid-column-start: 1;
+            grid-column-end: 2;
+            grid-row-start: 3;
+            grid-row-end: 4;
+            border: 2px solid black;
+        }
+
+        button {
+            display: block;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="quiz-container">
+        <div class="sporsmal1">
+            <p>Spørsmål 1: Hva står forkortelsen "HTTP" for?</p>
+            <label><input type="radio" name="q1" value="A"> A. HyperText Transfer Protocol </label>
+            <label><input type="radio" name="q1" value="B"> B. High-Tech Transfer Process</label>
+            <label><input type="radio" name="q1" value="C"> C. Hyperlink and Text Transmission Protocol</label>
+            <label><input type="radio" name="q1" value="D"> D. Hosted Transfer Protocol</label>
+        </div>
+
+        <div class="sporsmal2">
+            <p>Spørsmål 2: Hvilket operativsystem utviklet Apple Inc.?</p>
+            <label><input type="radio" name="q2" value="A"> A. Windows</label>
+            <label><input type="radio" name="q2" value="B"> B. macOS</label>
+            <label><input type="radio" name="q2" value="C"> C. Linux</label>
+            <label><input type="radio" name="q2" value="D"> D. Android</label>
+        </div>
+
+        <div class="sporsmal3">
+            <p>Spørsmål 3:  Hva er formålet med en firewall i datanettverk?</p>
+            <label><input type="radio" name="q3" value="A"> A. Å forbedre dataytelse </label>
+            <label><input type="radio" name="q3" value="B"> B. Å beskytte mot uautorisert tilgang</label>
+            <label><input type="radio" name="q3" value="C"> C. Å øke internett-hastigheten</label>
+            <label><input type="radio" name="q3" value="D"> D. Å administrere e-posttrafikk</label>
+        </div>
+
+        <div class="sporsmal4">
+            <p>Spørsmål 4: Hvilket programmeringsspråk ble utviklet av Microsoft og er mye brukt for å lage Windows-applikasjoner?</p>
+            <label><input type="radio" name="q4" value="A"> A. Python</label>
+            <label><input type="radio" name="q4" value="B"> B. Java</label>
+            <label><input type="radio" name="q4" value="C"> C. C#</label>
+            <label><input type="radio" name="q4" value="D"> D. Ruby</label>
+        </div>
+
+        <div class="sporsmal5">
+            <p>Spørsmål 5: Hva er en SSD?</p>
+            <label><input type="radio" name="q5" value="A"> A. System Status Detector</label>
+            <label><input type="radio" name="q5" value="B"> B. Software Security Database</label>
+            <label><input type="radio" name="q5" value="C"> C. Super Speed Device</label>
+            <label><input type="radio" name="q5" value="D"> D. Solid State Drive</label>
+        </div>
+
+       
+
+        <button onclick="beregnResultat()">Sjekk resultat</button>
+        <div id="resultat"></div>
+    </div>
+
+    <script>
+        function beregnResultat() {
+            let poengsum = 0;
+
+       
+            if (document.querySelector('input[name="q1"]:checked').value === "A") {
+                poengsum++;
+            }
+
+    
+            if (document.querySelector('input[name="q2"]:checked').value === "B") {
+                poengsum++;
+            }
+
+            if (document.querySelector('input[name="q3"]:checked').value === "B") {
+                poengsum++;
+            }
+
+            if (document.querySelector('input[name="q4"]:checked').value === "C") {
+                poengsum++;
+            }
+
+            if (document.querySelector('input[name="q5"]:checked').value === "D") {
+                poengsum++;
+            }
+
+            visResultat(poengsum);
+        }
+
+        function visResultat(poengsum) {
+            const resultatContainer = document.getElementById('resultat');
+            resultatContainer.innerHTML = `Din poengsum er: ${poengsum} av 5 poeng!`;
+        }
+    </script>
+</body>
+</html>
