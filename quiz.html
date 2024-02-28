@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fancy Flervalgsquiz</title>
     <style>
-        body {
+        .body_quiz {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #f8f8f8;
+            background-color: royalblue;
             margin: 0;
             padding: 0;
             display: flex;
@@ -80,6 +80,7 @@
     </style>
 </head>
 <body>
+    <section class="body_quiz"> 
     <div class="quiz-container">
         <div class="sporsmal-container">
             <p>Spørsmål 1: Hva står forkortelsen "HTTP" for?</p>
@@ -167,5 +168,6 @@
             resultatContainer.innerHTML = `Din poengsum er: ${poengsum} av 5 poeng!`;
         }
     </script>
+    </section>
 </body>
 </html>
