@@ -67,7 +67,7 @@ canvas {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: radial-gradient(red, green, blue); 
+    background-image: radial-gradient(circle, #b2fdfd, #00f8fd, #008999); 
     clip-path: circle(0% at 50% 50%); 
     pointer-events: none; 
     z-index: 10; 
