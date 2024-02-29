@@ -8,6 +8,7 @@
   
   body {
     background-color: #2b262d;
+    overflow: hidden;
   }
   
   .prikk {

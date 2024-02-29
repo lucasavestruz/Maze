@@ -10,34 +10,104 @@ for (i = 0; i < 10; i++) {
     }
 }
 
+
 const movableElement = document.getElementById('prikk');
 
 let positionX = 10;
 let positionY = 50;
 const moveSpeed = 60;
 
-const row = positionY / moveSpeed;
-const col = positionX / moveSpeed;
+let row = 0;
+let column = 9;
 
 document.addEventListener('keydown', (event) => {
     switch (event.key) {
         case 'ArrowUp':
-            positionY -= moveSpeed;
+            if (canMoveUp(row, column)) {
+                positionY -= moveSpeed;
+                row--;
+            }
             break;
         case 'ArrowDown':
-            positionY += moveSpeed;
+            if (canMoveDown(row, column)) {
+                positionY += moveSpeed;
+                row++;
+            }
             break;
         case 'ArrowLeft':
-            positionX += moveSpeed;
+            if (canMoveLeft(row, column)) {
+                positionX += moveSpeed;
+                column--;
+            }
             break;
         case 'ArrowRight':
-            positionX -= moveSpeed;
+            if (canMoveRight(row, column)) {
+                positionX -= moveSpeed;
+                column++;
+            }
             break;
     }
     movableElement.style.right = positionX + 'px';
     movableElement.style.top = positionY + 'px';
+    console.log(row, column);
 });
 
+
+function canMoveUp(row, column) {
+    if (row == 0) {
+        return false;
+    }
+
+    celle1 = document.querySelector(".r"+row+".c"+column);
+    style = window.getComputedStyle(celle1);
+    if( style.getPropertyValue("border-top-width") == "1px" ) {
+        return false;
+    }
+
+    return true;
+}
+
+function canMoveDown(row, column) {
+    if (row == 9) {
+        return false;
+    }
+
+    celle1 = document.querySelector(".r"+row+".c"+column);  
+    style = window.getComputedStyle(celle1);    
+    if( style.getPropertyValue("border-bottom-width") == "1px" ) {
+        return false;
+    }
+      
+    return true;
+}
+
+function canMoveLeft(row, column) {
+    if (column == 0) {
+        return false;
+    }
+
+    celle1 = document.querySelector(".r"+row+".c"+column)  
+    style = window.getComputedStyle(celle1);
+    if( style.getPropertyValue("border-left-width") == "1px" ) {
+        return false;
+    }
+
+    return true;
+}
+
+function canMoveRight(row, column) {
+    if (column == 9) {
+        return false;
+    }
+    
+    celle1 = document.querySelector(".r"+row+".c"+column);
+    style = window.getComputedStyle(celle1);
+    if( style.getPropertyValue("border-right-width") == "1px" ) {
+        return false;
+    }
+
+    return true;
+}
 
 
 
@@ -248,7 +318,7 @@ function myFunctionBlack() {
     ellipse.style.backgroundColor = "black";
     roundedSquare.style.backgroundColor = "black";
 
-    
+
 }
 
 
@@ -290,7 +360,7 @@ function myFunctionEllipse() {
 function myFunctionRoundedSquare() {
     prikk.style.borderRadius = "15px";
     prikk.innerHTML = "";
-    
+
 
     roundedSquare.style.border = "3px solid black";
     circle.style.border = "none";
@@ -317,7 +387,7 @@ function myFunctionEmoji1() {
     grey.style.border = "none";
     pink.style.border = "none";
     black.style.border = "none";
-    
+
 }
 
 function myFunctionEmoji2() {
@@ -380,7 +450,7 @@ function myFunctionEmoji4() {
     black.style.border = "none";
 }
 
-function myFunctionEmoji5() {   
+function myFunctionEmoji5() {
     prikk.style.fontSize = "40px";
     prikk.innerHTML = "🧑🏿‍🦰";
     prikk.style.backgroundColor = "transparent";
@@ -399,4 +469,5 @@ function myFunctionEmoji5() {
     pink.style.border = "none";
     black.style.border = "none";
 }
+
 
