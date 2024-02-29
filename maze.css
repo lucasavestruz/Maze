@@ -83,14 +83,15 @@
     grid-template-rows: repeat(10, 60px);
     width: fit-content;
     margin: 100px auto;
-    background-color: #d6d6e6;
+    background-color: transparent;
+	  backdrop-filter: blur(15px);
     padding: 20px;
     border-radius: 20px;
     box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
   }
   
   .maze_container>div{
-    border: 1px solid #36395A;
+    border: 1px solid #444ca4;
   }
   
   
