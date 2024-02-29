@@ -60,7 +60,7 @@ function canMoveUp(row, column) {
 
     celle1 = document.querySelector(".r"+row+".c"+column);
     style = window.getComputedStyle(celle1);
-    if( style.getPropertyValue("border-top-width") == "1px" ) {
+    if( style.getPropertyValue("border-top-width") != "0px" ) {
         return false;
     }
 
@@ -74,7 +74,7 @@ function canMoveDown(row, column) {
 
     celle1 = document.querySelector(".r"+row+".c"+column);  
     style = window.getComputedStyle(celle1);    
-    if( style.getPropertyValue("border-bottom-width") == "1px" ) {
+    if( style.getPropertyValue("border-bottom-width") != "0px" ) {
         return false;
     }
       
@@ -88,7 +88,7 @@ function canMoveLeft(row, column) {
 
     celle1 = document.querySelector(".r"+row+".c"+column)  
     style = window.getComputedStyle(celle1);
-    if( style.getPropertyValue("border-left-width") == "1px" ) {
+    if( style.getPropertyValue("border-left-width") != "0px" ) {
         return false;
     }
 
@@ -99,10 +99,10 @@ function canMoveRight(row, column) {
     if (column == 9) {
         return false;
     }
-    
+
     celle1 = document.querySelector(".r"+row+".c"+column);
     style = window.getComputedStyle(celle1);
-    if( style.getPropertyValue("border-right-width") == "1px" ) {
+    if( style.getPropertyValue("border-right-width") != "0px" ) {
         return false;
     }
 
