@@ -79,12 +79,9 @@ canvas {
     align-items: center;
     min-height: 100vh;
     transition-delay: 1.2s;
-}
-#gate {
-    background-color: black;
-    position: relative;
-    width: 30%;
-    cursor: pointer;
+    background-image: url("Bilder/Gate.jpg");
+    background-position: center;
+	background-size: cover;
 }
 
 .body_index{
