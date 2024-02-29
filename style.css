@@ -67,7 +67,7 @@ canvas {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgb(33, 215, 206); 
+    background-color: radial-gradient(red, green, blue); 
     clip-path: circle(0% at 50% 50%); 
     pointer-events: none; 
     z-index: 10; 
@@ -92,7 +92,7 @@ canvas {
     position: relative;
     cursor: pointer;
     width: 17%;
-    padding-top: 250px;
+    padding-top: 25%;
     border-radius: 75%;
 }
 
