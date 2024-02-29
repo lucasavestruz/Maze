@@ -7,7 +7,9 @@
   }
   
   .body_maze {
-    background-color: #2b262d;
+    background-image: url("Bilder/bakgrunn_hoved.jpg");
+    background-position: center;
+	  background-size: cover;
     overflow: hidden;
   }
   
