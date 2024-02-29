@@ -4,80 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fancy Flervalgsquiz</title>
-    <style>
-        .body_quiz {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: royalblue;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-        }
-
-        .quiz-container {
-            max-width: 800px;
-            background-color: #fff;
-            border: 2px solid #ddd;
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            margin: 20px;
-        }
-
-        .sporsmal-container {
-            padding: 20px;
-            border-bottom: 2px solid #ddd;
-        }
-
-        .sporsmal-container p {
-            font-size: 18px;
-            margin-bottom: 10px;
-        }
-
-        .alternativer-container {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 10px;
-        }
-
-        .alternativ-label {
-            display: block;
-            padding: 10px;
-            background-color: #f4f4f4;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
-
-        .alternativ-label:hover {
-            background-color: #e0e0e0;
-        }
-
-        .sjekk-resultat-btn {
-            display: block;
-            margin: 20px auto;
-            padding: 10px 20px;
-            font-size: 16px;
-            background-color: #4caf50;
-            color: #fff;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
-
-        .sjekk-resultat-btn:hover {
-            background-color: #45a049;
-        }
-
-        .resultat {
-            text-align: center;
-            margin-bottom: 20px;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <section class="body_quiz"> 
@@ -136,38 +63,8 @@
         <div class="resultat" id="resultat"></div>
     </div>
 
-    <script>
-        function beregnResultat() {
-            let poengsum = 0;
-
-            if (document.querySelector('input[name="q1"]:checked').value === "A") {
-                poengsum++;
-            }
-
-            if (document.querySelector('input[name="q2"]:checked').value === "B") {
-                poengsum++;
-            }
-
-            if (document.querySelector('input[name="q3"]:checked').value === "B") {
-                poengsum++;
-            }
-
-            if (document.querySelector('input[name="q4"]:checked').value === "C") {
-                poengsum++;
-            }
-
-            if (document.querySelector('input[name="q5"]:checked').value === "D") {
-                poengsum++;
-            }
-
-            visResultat(poengsum);
-        }
-
-        function visResultat(poengsum) {
-            const resultatContainer = document.getElementById('resultat');
-            resultatContainer.innerHTML = `Din poengsum er: ${poengsum} av 5 poeng!`;
-        }
-    </script>
     </section>
+<script src="spill.js"></script>
+    
 </body>
 </html>
