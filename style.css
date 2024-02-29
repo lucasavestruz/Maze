@@ -10,13 +10,17 @@ body.intro {
 }
 
 .introH1 {
-    color: white;
+    background: -webkit-linear-gradient(rgb(81, 228, 218), rgb(127, 51, 10));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     display: block;
-    top: 100px;
     text-align: center;
-    top: 100px;
-    position: relative;
-    font-size: 50px;
+    position: absolute;
+    top: 6%;
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 150px;
 }
 
 .footer{
