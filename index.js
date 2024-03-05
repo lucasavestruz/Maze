@@ -6,6 +6,9 @@ port.addEventListener("click", () => {
     portal.classList.add("aktiv");
     let body_portal=document.querySelector(".body_portal")
     let body_maze=document.querySelector(".body_maze")
+    const audio=new Audio("Lyder/The_Portal.mp3");
+    audio.play();
+
     setTimeout(() => {
         body.style.backgroundColor = "black";
     }, 1200); 
@@ -17,4 +20,5 @@ port.addEventListener("click", () => {
     setTimeout(() => {
         body_maze.style.display = "block";
     }, 1300); 
+    
 })
