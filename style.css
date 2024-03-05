@@ -5,8 +5,11 @@
     box-sizing: border-box;
 }
 
-body.intro {
-    background-color: #2b262d;
+.intro {
+    background-color: grey;
+    background-image: url("Bilder/Gate.jpg");
+    background-position: center;
+	background-size: cover;
 }
 
 .introH1 {
@@ -27,8 +30,8 @@ body.intro {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     bottom: 0;
-    background-color: darkgray;
-    border-top: 5px solid black;
+    background-color: transparent;
+	backdrop-filter: blur(15px);
     padding: 30px;
     font-family: Verdana, Tahoma, sans-serif;
 }
@@ -83,9 +86,6 @@ canvas {
     align-items: center;
     min-height: 100vh;
     transition-delay: 1.2s;
-    background-image: url("Bilder/Gate.jpg");
-    background-position: center;
-	background-size: cover;
 }
 
 #gate {
