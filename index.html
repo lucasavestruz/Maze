@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,92 +10,111 @@
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Jacquarda+Bastarda+9&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Jacquarda+Bastarda+9&display=swap"
+        rel="stylesheet">
 </head>
+
 <body class="intro">
-<section class="body_portal">
+    <section class="body_portal">
 
 
-<section class="sec">
-        <h1 class="introH1">The Maze</h1>
-        <div class="clipPath-overgang"></div>
-        <div id="gate"></div>
-</section>
+        <section class="sec">
+            <h1 class="introH1">The Maze</h1>
+            <div class="clipPath-overgang"></div>
+            <div id="gate"></div>
+        </section>
 
 
 
-    <footer class="footer">
-        <div class="arstall">© 2024</div>
-        <div class="drevet_av">
-            <table>
-                <tr>
-                    <th>Drevet av:</th>
-                    <td class="td_footer">•Sondre</td>
-                    <td class="td_footer">•Lucas</td>
-                    <td class="td_footer">•Fabian</td>
-                    <td class="td_footer">•Marcus</td>
-                    <td class="td_footer">•Christoffer</td>
-                </tr>
-            </table>
+        <footer class="footer">
+            <div class="arstall">© 2024</div>
+            <div class="drevet_av">
+                <table>
+                    <tr>
+                        <th>Drevet av:</th>
+                        <td class="td_footer">•Sondre</td>
+                        <td class="td_footer">•Lucas</td>
+                        <td class="td_footer">•Fabian</td>
+                        <td class="td_footer">•Marcus</td>
+                        <td class="td_footer">•Christoffer</td>
+                    </tr>
+                </table>
+            </div>
+
+        </footer>
+    </section>
+
+    <section class="body_maze">
+
+        <div id="maze" class="maze_container">
+
+            <div id="prikk" class="prikk"></div>
         </div>
-       
-    </footer>
-</section>
-
-<section class="body_maze">
-
-<div id="maze" class="maze_container">
-
-    <div id="prikk" class="prikk"></div>
-</div>
 
 
 
-<div class="knapp">
-    <button id="knapp" onclick="myFunction()"> Trykk meg</button>
-</div>
+        <div class="knapp">
+            <button id="knapp" onclick="myFunction()"> Trykk meg</button>
+        </div>
 
-<div id="meny" class="meny">
-    <div class="overskrift">
-        <p></p>
-        <p class="endre_figur"> Endre figuren</p>
-        <i onclick="myFunctionX()" id="icon" class='bx bx-x'></i>
-    </div>
+        <div id="meny" class="meny">
+            <div class="overskrift">
+                <p></p>
+                <p class="endre_figur"> Endre figuren</p>
+                <i onclick="myFunctionX()" id="icon" class='bx bx-x'></i>
+            </div>
 
-    <div class="farge">
-        <p class="farge_tekst"> Farger </p>
-        <div onclick="myFunctionRed()" id="red" class="farge_div_1"></div>
-        <div onclick="myFunctionBlue()" id="blue" class="farge_div_2"></div>
-        <div onclick="myFunctionGreen()" id="green" class="farge_div_3"></div>
-        <div onclick="myFunctionYellow()" id="yellow" class="farge_div_4"></div>
-        <div onclick="myFunctionPurple()" id="purple" class="farge_div_5"></div>
-        <div onclick="myFunctionBrown()" id="brown" class="farge_div_6"></div>
-        <div onclick="myFunctionGrey()" id="grey" class="farge_div_7"></div>
-        <div onclick="myFunctionPink()" id="pink" class="farge_div_8"></div>
-        <div onclick="myFunctionBlack()" id="black" class="farge_div_9"></div>
-    </div>
-     <br>
-    <div class="form">
-        <p class="form_tekst">Former</p>
-        <div onclick="myFunctionCircle()" id="circle" class="form_div_1"></div>
-        <div onclick="myFunctionSquare()" id="square" class="form_div_2"></div>
-        <div onclick="myFunctionEllipse()" id="ellipse" class="form_div_3"></div>
-        <div onclick="myFunctionRoundedSquare()" id="roundedSquare" class="form_div_4"></div>
-        <div onclick="myFunctionEmoji1()" class="form_div_5"> 👳🏿‍♂️</div>
-        <div onclick="myFunctionEmoji2()" class="form_div_6"> 👨🏿‍🦽</div>
-        <div onclick="myFunctionEmoji3()" class="form_div_7"> 🦧</div>
-        <div onclick="myFunctionEmoji4()" class="form_div_8"> 🤪</div>
-        <div onclick="myFunctionEmoji5()" class="form_div_9"> 🧑🏿‍🦰</div>
-        
-    </div>
+            <div class="farge">
+                <p class="farge_tekst"> Farger </p>
+                <div onclick="myFunctionRed()" id="red" class="farge_div_1"></div>
+                <div onclick="myFunctionBlue()" id="blue" class="farge_div_2"></div>
+                <div onclick="myFunctionGreen()" id="green" class="farge_div_3"></div>
+                <div onclick="myFunctionYellow()" id="yellow" class="farge_div_4"></div>
+                <div onclick="myFunctionPurple()" id="purple" class="farge_div_5"></div>
+                <div onclick="myFunctionBrown()" id="brown" class="farge_div_6"></div>
+                <div onclick="myFunctionGrey()" id="grey" class="farge_div_7"></div>
+                <div onclick="myFunctionPink()" id="pink" class="farge_div_8"></div>
+                <div onclick="myFunctionBlack()" id="black" class="farge_div_9"></div>
+            </div>
+            <br>
+            <div class="form">
+                <p class="form_tekst">Former</p>
+                <div onclick="myFunctionCircle()" id="circle" class="form_div_1"></div>
+                <div onclick="myFunctionSquare()" id="square" class="form_div_2"></div>
+                <div onclick="myFunctionEllipse()" id="ellipse" class="form_div_3"></div>
+                <div onclick="myFunctionRoundedSquare()" id="roundedSquare" class="form_div_4"></div>
+                <div onclick="myFunctionEmoji1()" class="form_div_5"> 👳🏿‍♂️</div>
+                <div onclick="myFunctionEmoji2()" class="form_div_6"> 👨🏿‍🦽</div>
+                <div onclick="myFunctionEmoji3()" class="form_div_7"> 🦧</div>
+                <div onclick="myFunctionEmoji4()" class="form_div_8"> 🤪</div>
+                <div onclick="myFunctionEmoji5()" class="form_div_9"> 🧑🏿‍🦰</div>
 
-</div>
+            </div>
+
+        </div>
+
+        <img id="key_image1" src="Bilder/key1.jpg">
+        <img id="key_image2" src="Bilder/key2.jpg">
+        <img id="key_image3" src="Bilder/key3.jpg">
+
+        <div class="keys_abc">
+            <div id="keys_counter" class="keys_counter"> Nøkler samlet</div>
+            <div class="keys_container">
+                <div class="key_position_1"></div>
+                <div class="key_position_2"></div>
+                <div class="key_position_3"></div>
+            </div>
+
+        </div>
 
 
-<section>
+        <section>
 
 
-    
-    <script src="script.js"></script> <script src="index.js"></script>
+
+            <script src="script.js"></script>
+            <script src="index.js"></script>
 </body>
+
 </html>
