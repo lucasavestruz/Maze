@@ -50,6 +50,25 @@ document.addEventListener('keydown', (event) => {
     movableElement.style.right = positionX + 'px';
     movableElement.style.top = positionY + 'px';
     console.log(row, column);
+
+    if (column == 8 & row == 8) {
+       
+        celle_r8_c8.removeChild(img1);
+        const key_position_1 = document.querySelector(".key_position_1");
+        key_position_1.appendChild(img1);
+    }
+
+    if (column == 0 & row == 0) {
+        celle_r0_c0.removeChild(img2);
+        const key_position_2 = document.querySelector(".key_position_2");
+        key_position_2.appendChild(img2);
+    }
+
+    if (column == 1 & row == 8) {
+        celle_r2_c8.removeChild(img3);
+        const key_position_3 = document.querySelector(".key_position_3");
+        key_position_3.appendChild(img3);
+    }
 });
 
 
@@ -470,4 +489,16 @@ function myFunctionEmoji5() {
     black.style.border = "none";
 }
 
+const celle_r8_c8 = document.querySelector(".r8.c8");
+const img1 = document.getElementById("key_image1");
+celle_r8_c8.appendChild(img1);
+
+
+const celle_r0_c0 = document.querySelector(".r0.c0");
+const img2 = document.getElementById("key_image2");
+celle_r0_c0.appendChild(img2); 
+
+const celle_r2_c8 = document.querySelector(".r8.c1");
+const img3 = document.getElementById("key_image3");
+celle_r2_c8.appendChild(img3);
 
