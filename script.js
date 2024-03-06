@@ -69,6 +69,36 @@ document.addEventListener('keydown', (event) => {
         const key_position_3 = document.querySelector(".key_position_3");
         key_position_3.appendChild(img3);
     }
+
+    if (allKeysCollected()) {
+        /* Åpner en utgang i celle r.4.c0 når alle nøkler er plukket */
+        const celle_r4_c0 = document.querySelector(".r4.c0");
+        celle_r4_c0.style.borderLeft = "none";
+
+        /* Setter en pil i celle r4.c0 når alle nøkler er plukket */
+        const arrow = document.getElementById("key_image");
+        celle_r4_c0.appendChild(arrow);
+        arrow.style.display = "block";
+    }
+
+    if (allKeysCollected() && row == 4 && column == 0) {
+        if (event.key == "ArrowLeft") {
+            endConditionMet = true;
+        }
+    }
+
+    if (endConditionMet) {
+        const gratulerer = document.getElementById("gratulerer");
+        gratulerer.style.display = "block";
+        prikk.style.display = "none";
+
+        const knapp = document.getElementById("knapp");
+        knapp.style.display = "none";
+
+        const keys_abc = document.getElementById("keys_abc");
+        keys_abc.style.display = "none";
+
+    }
 });
 
 
@@ -501,4 +531,21 @@ celle_r0_c0.appendChild(img2);
 const celle_r2_c8 = document.querySelector(".r8.c1");
 const img3 = document.getElementById("key_image3");
 celle_r2_c8.appendChild(img3);
+
+const key1 = document.getElementById("key_image1");
+const key2 = document.getElementById("key_image2");
+const key3 = document.getElementById("key_image3");
+
+function allKeysCollected() {
+    return !maze_container.contains(key1) &&
+        !maze_container.contains(key2) &&
+        !maze_container.contains(key3);
+}
+
+
+
+let endConditionMet = false;
+
+
+
 
