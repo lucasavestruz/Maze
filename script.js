@@ -76,7 +76,7 @@ document.addEventListener('keydown', (event) => {
         celle_r4_c0.style.borderLeft = "none";
 
         /* Setter en pil i celle r4.c0 når alle nøkler er plukket */
-        const arrow = document.getElementById("key_image");
+        const arrow = document.getElementById("arrow_image");
         celle_r4_c0.appendChild(arrow);
         arrow.style.display = "block";
     }
