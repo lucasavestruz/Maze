@@ -838,3 +838,8 @@
   #gratulerer {
     display: none;
   }
+
+  #arrow_image {
+    margin: 10px;
+    width: 43px;
+  }
