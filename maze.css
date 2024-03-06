@@ -818,3 +818,23 @@
     border: 1px solid black;
     border-radius: 50%;
   }
+
+  .gratulerer {
+    width: 280px;
+    height: 100px;
+    background-color: #d6d6e6;
+    position: relative;
+    left: 735px;
+    bottom: 700px;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    font-family: "JetBrains Mono", monospace;
+    border-radius: 10px;
+    font-size: 16px;
+    align-items: center;
+  }
+  
+  #gratulerer {
+    display: none;
+  }
