@@ -427,7 +427,7 @@ function myFunctionRoundedSquare() {
 function myFunctionEmoji1() {
 
     prikk.style.fontSize = "40px";
-    prikk.innerHTML = "👳🏿‍♂️";
+    prikk.innerHTML = "⭐️";
     prikk.style.backgroundColor = "transparent";
     circle.style.border = "none";
     square.style.border = "none";
@@ -448,7 +448,7 @@ function myFunctionEmoji1() {
 
 function myFunctionEmoji2() {
     prikk.style.fontSize = "40px";
-    prikk.innerHTML = "👨🏿‍🦽";
+    prikk.innerHTML = "🌮";
     prikk.style.backgroundColor = "transparent";
     circle.style.border = "none";
     square.style.border = "none";
@@ -468,7 +468,7 @@ function myFunctionEmoji2() {
 
 function myFunctionEmoji3() {
     prikk.style.fontSize = "40px";
-    prikk.innerHTML = "🦧";
+    prikk.innerHTML = "🏀";
     prikk.style.backgroundColor = "transparent";
     circle.style.border = "none";
     square.style.border = "none";
@@ -488,7 +488,7 @@ function myFunctionEmoji3() {
 
 function myFunctionEmoji4() {
     prikk.style.fontSize = "40px";
-    prikk.innerHTML = "🤪";
+    prikk.innerHTML = "🚁";
     prikk.style.backgroundColor = "transparent";
     circle.style.border = "none";
     square.style.border = "none";
@@ -508,7 +508,7 @@ function myFunctionEmoji4() {
 
 function myFunctionEmoji5() {
     prikk.style.fontSize = "40px";
-    prikk.innerHTML = "🧑🏿‍🦰";
+    prikk.innerHTML = "🗿";
     prikk.style.backgroundColor = "transparent";
     circle.style.border = "none";
     square.style.border = "none";
