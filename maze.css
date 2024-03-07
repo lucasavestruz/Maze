@@ -29,10 +29,15 @@
   #prikk {
     border: none;
   }
+
+  .knapp{
+    margin-left: 10%; 
+    position: absolute;
+    bottom: 10%;
+  }
   
   .knapp button {
     display: block;
-    margin: auto;
     align-items: center;
     appearance: none;
     background-color: #FCFCFD;
@@ -98,8 +103,8 @@
   
   .meny {
     position: absolute;
-    top: 160px;
-    left: 100px;
+    top: 15%;
+    left: 3%;
     border-radius: 20px;
     background-color: #d6d6e6;
     height: 500px;
