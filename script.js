@@ -56,8 +56,23 @@ document.addEventListener('keydown', (event) => {
         celle_r8_c8.removeChild(img1);
         const key_position_1 = document.querySelector(".key_position_1");
         key_position_1.appendChild(img1);
-        const audio=new Audio("Lyder/KeyCollected.mp3");
-        audio.play();
+
+        // const audio=new Audio("Lyder/KeyCollected.mp3");
+        //audio.play();
+
+        const body_maze =document.querySelector(".body_maze");
+        body_maze.style.display = "none";
+        
+        const intro = document.querySelector(".intro");
+        intro.style.display = "none";
+
+        const body_memory = document.getElementById("body_memory");
+        body_memory.style.display = "block";
+
+       
+
+
+
 
     }
 
