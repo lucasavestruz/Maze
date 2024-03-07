@@ -92,9 +92,9 @@ canvas {
     position: absolute;
     cursor: pointer;
     width: 17%;
-    top: 39%;
-    padding-top: 24%;
-    border-radius: 75%;
+    top: 37%;
+    padding-top: 25%;
+    border: radius 75%; 
 }
 
 .body_index{
