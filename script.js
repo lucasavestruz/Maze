@@ -56,18 +56,25 @@ document.addEventListener('keydown', (event) => {
         celle_r8_c8.removeChild(img1);
         const key_position_1 = document.querySelector(".key_position_1");
         key_position_1.appendChild(img1);
+        const audio=new Audio("Lyder/KeyCollected.mp3");
+        audio.play();
+
     }
 
     if (column == 0 & row == 0) {
         celle_r0_c0.removeChild(img2);
         const key_position_2 = document.querySelector(".key_position_2");
         key_position_2.appendChild(img2);
+        const audio=new Audio("Lyder/KeyCollected.mp3");
+        audio.play();
     }
 
     if (column == 1 & row == 8) {
         celle_r2_c8.removeChild(img3);
         const key_position_3 = document.querySelector(".key_position_3");
         key_position_3.appendChild(img3);
+        const audio=new Audio("Lyder/KeyCollected.mp3");
+        audio.play();
     }
 
     if (allKeysCollected()) {
