@@ -89,11 +89,12 @@ canvas {
 }
 
 #gate {
-    position: relative;
+    position: absolute;
     cursor: pointer;
     width: 17%;
+    top: 37%;
     padding-top: 25%;
-    border-radius: 75%;
+    border: radius 75%; 
 }
 
 .body_index{

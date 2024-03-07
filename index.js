@@ -20,5 +20,11 @@ port.addEventListener("click", () => {
     setTimeout(() => {
         body_maze.style.display = "block";
     }, 1300); 
+
+    setTimeout(() => {
+        var audioBakgrunn = new Audio('Lyder/musikkBakgrunn.mp3');
+        audioBakgrunn.play();
+        audioBakgrunn.loop = true;
+    }, 3000); 
     
 })
