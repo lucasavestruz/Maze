@@ -526,6 +526,7 @@ function myFunctionEmoji5() {
     black.style.border = "none";
 }
 
+
 const celle_r8_c8 = document.querySelector(".r8.c8");
 const img1 = document.getElementById("key_image1");
 celle_r8_c8.appendChild(img1);
@@ -549,8 +550,44 @@ function allKeysCollected() {
         !maze_container.contains(key3);
 }
 
-
-
+function startNedtelling(varighet, display) {
+    var start = Date.now(),
+    diff,
+    minutter,
+    sekunder;
+    function timer() {
+    // finn antall sekunder mellom nå og start
+    diff = varighet - (((Date.now() - start) / 1000) | 0);
+    
+    // gjør om tiden til minutter og sekunder
+    minutter = (diff / 60) | 0;
+    sekunder = (diff % 60) | 0;
+    
+    minutter = minutter < 10 ? "0" + minutter : minutter;
+    sekunder = sekunder < 10 ? "0" + sekunder : sekunder;
+    
+    // Oppdaterer display-elementet med de nye verdiene
+    display.textContent = minutter + ":" + sekunder; 
+    
+    if (diff <= 0) {
+        
+        
+        // GAME OVER (her må vi fylle inn ett eller annet som skjer når man taper)
+    
+        
+    }
+    };
+    // Oppdaterer klokken hvert sekund
+    timer();
+    var interval = setInterval(timer, 1000);
+    }
+    
+    window.onload = function () {
+    var femMinutter = 60 * 5,
+    display = document.querySelector('#timer'); 
+    startNedtelling(femMinutter, display);
+    };
+    
 let endConditionMet = false;
 
 
