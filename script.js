@@ -105,6 +105,8 @@ document.addEventListener('keydown', (event) => {
         const keys_abc = document.getElementById("keys_abc");
         keys_abc.style.display = "none";
 
+        meny.style.display = "none";
+
     }
 });
 
