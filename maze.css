@@ -787,8 +787,30 @@
     width: 35px;
   }
   
+  .timer_abc {
+   
+    flex-direction: column;
+    width: 180px;
+    height: 100px;
+    background-color: #d6d6e6;
+    position: relative;
+    bottom: 640px;
+    left: 79%;
+    border-radius: 10px;
+    font-family: "JetBrains Mono", monospace;
+    display: flex;
+    justify-content: space-around;
+    
+    font-size: 20px;
+  }
   
-  
+  .timer_tekst {
+    text-align: center;
+  }
+
+  .timer {
+    text-align: center;
+  }
   .keys_abc {
    
     flex-direction: column;
