@@ -66,7 +66,7 @@ document.addEventListener('keydown', (event) => {
         const intro = document.querySelector(".intro");
         intro.style.display = "none";
 
-        const body_memory = document.getElementById("body_memory");
+        const body_memory = document.querySelector(".body_memory");
         body_memory.style.display = "block";
 
        

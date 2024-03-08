@@ -64,3 +64,7 @@ button {
 #teller {
     font-size: 20px;
 }
+
+#body_memory {
+    display: none;
+}
