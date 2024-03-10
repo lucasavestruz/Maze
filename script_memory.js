@@ -112,3 +112,5 @@ for (let i = 0; i < antallKort; i ++) {
     fargeListe.splice(indeksFarger, 1);
     kortContainer.appendChild(kort);
 }
+
+export { teller, kortAvdekket, antallKort };
