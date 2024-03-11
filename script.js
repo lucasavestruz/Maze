@@ -63,7 +63,7 @@ document.addEventListener('keydown', (event) => {
         document.querySelector(".body_maze").style.display = "none";
         document.querySelector(".body_portal").style.display = "none";
         document.querySelector(".body_memory").style.display = "block";
-
+        document.querySelector(".intro").style.backgroundImage = "url('Bilder/memorybackground.jpg')";
         //const intro=document.querySelector(".intro")
         //intro.style.backgroundImage = "url('img_tree.png')";
     }
@@ -590,12 +590,29 @@ function startNedtelling(varighet, display) {
     
     // Oppdaterer display-elementet med de nye verdiene
     display.textContent = minutter + ":" + sekunder; 
+
+
+    if (diff<=10){
+        document.querySelector(".ti_sekunder").style.display = "block";
+    }
+
+    if (diff<=8){
+        document.querySelector(".ti_sekunder").style.display = "none";
+    }
     
     if (diff <= 0) {
         
-        
+        document.querySelector(".body_maze").style.display = "none";
+        document.querySelector(".body_portal").style.display = "none";
+        document.querySelector(".body_memory").style.display = "none";
+        document.querySelector(".quiz_body").style.display = "none";
+        document.body.style.backgroundImage = "none";
+        document.querySelector(".tap").style.display = "block";
+        document.querySelector(".intro").style.backgroundColor = "black";
+
+
         // GAME OVER (her må vi fylle inn ett eller annet som skjer når man taper)
-    
+
         
     }
     };

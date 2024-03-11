@@ -77,6 +77,8 @@ function genererKort(farge) {
 
                 document.querySelector(".body_maze").style.display = "block";
                 document.querySelector(".body_memory").style.display = "none";
+                const audio=new Audio("Lyder/KeyCollected.mp3");
+                audio.play();
 
             }
 

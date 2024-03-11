@@ -31,6 +31,8 @@ function visResultat(poengsum) {
     alert("Gratulerer! Du besto quizen og fikk "+poengsum+" poeng!")
     document.querySelector(".body_maze").style.display = "block";
     document.querySelector(".quiz_body").style.display = "none";
+    const audio=new Audio("Lyder/KeyCollected.mp3");
+        audio.play();
     }
     else{
         resultatContainer.innerHTML = 'Du besto desverre ikke';
