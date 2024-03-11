@@ -7,6 +7,7 @@
   }
   
   .body_maze {
+    height: 100vh;
     background-image: url("Bilder/bakgrunn_hoved.jpg");
     background-position: center;
 	  background-size: cover;
@@ -28,10 +29,15 @@
   #prikk {
     border: none;
   }
+
+  .knapp{
+    margin-left: 10%; 
+    position: absolute;
+    bottom: 10%;
+  }
   
   .knapp button {
     display: block;
-    margin: auto;
     align-items: center;
     appearance: none;
     background-color: #FCFCFD;
@@ -97,8 +103,8 @@
   
   .meny {
     position: absolute;
-    top: 160px;
-    left: 100px;
+    top: 15%;
+    left: 3%;
     border-radius: 20px;
     background-color: #d6d6e6;
     height: 500px;
@@ -426,7 +432,6 @@
   .r0.c9 {
     border-left: none;
     border-bottom: none;
-    border-right: none;
   }
   
   .r0.c8 {
@@ -756,7 +761,6 @@
   
   .r4.c0 {
     border-top: none;
-    border-left: none;
   }
   
   .r2.c2 {
@@ -776,4 +780,93 @@
   
   .r2.c3 {
     border-bottom: none;
+  }
+
+  img {
+    margin: 6px;
+    width: 35px;
+  }
+  
+  .timer_abc {
+   
+    flex-direction: column;
+    width: 180px;
+    height: 100px;
+    background-color: #d6d6e6;
+    position: relative;
+    bottom: 640px;
+    left: 79%;
+    border-radius: 10px;
+    font-family: "JetBrains Mono", monospace;
+    display: flex;
+    justify-content: space-around;
+    
+    font-size: 20px;
+  }
+  
+  .timer_tekst {
+    text-align: center;
+  }
+
+  .timer {
+    text-align: center;
+  }
+  .keys_abc {
+   
+    flex-direction: column;
+    width: 300px;
+    height: 130px;
+    background-color: #d6d6e6;
+    position: relative;
+    bottom: 700px;
+    left: 75%;
+    border-radius: 10px;
+    font-family: "JetBrains Mono", monospace;
+    display: flex;
+    justify-content: space-around;
+    
+    font-size: 20px;
+  }
+  
+  .keys_counter {
+    text-align: center;
+  }
+  
+  .keys_container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .keys_container >div {
+    width: 50px;
+    height: 50px;
+    border: 1px solid black;
+    border-radius: 50%;
+  }
+
+  .gratulerer {
+    width: 280px;
+    height: 100px;
+    background-color: #d6d6e6;
+    position: relative;
+    left: 41%;
+    bottom: 625px;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    font-family: "JetBrains Mono", monospace;
+    border-radius: 10px;
+    font-size: 16px;
+    align-items: center;
+  }
+  
+  #gratulerer {
+    display: none;
+  }
+
+  #arrow_image {
+    margin: 10px;
+    width: 43px;
   }

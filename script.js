@@ -50,6 +50,97 @@ document.addEventListener('keydown', (event) => {
     movableElement.style.right = positionX + 'px';
     movableElement.style.top = positionY + 'px';
     console.log(row, column);
+
+    if (column == 8 & row == 8) {
+       
+        celle_r8_c8.removeChild(img1);
+        const key_position_1 = document.querySelector(".key_position_1");
+        key_position_1.appendChild(img1);
+
+        // const audio=new Audio("Lyder/KeyCollected.mp3");
+        //audio.play();
+
+        const body_maze =document.querySelector(".body_maze");
+        body_maze.style.display = "none";
+        
+        const body_portal = document.querySelector(".body_portal");
+        body_portal.style.display = "none";
+
+        const body_memory = document.querySelector(".body_memory");
+        body_memory.style.display = "block";
+
+        const intro=document.querySelector(".intro")
+        intro.style.backgroundImage = "url('img_tree.png')";
+
+
+    }
+    
+
+
+    import { teller, kortAvdekket, antallKort } from './script_memorys.mjs';
+
+    console.log(teller, kortAvdekket, antallKort); 
+    
+    if (teller >= 45 && kortAvdekket === antallKort) {
+      const body_maze = document.querySelector(".body_maze");
+      const body_memory = document.querySelector(".body_memory");
+    
+      if (body_maze && body_memory) { 
+        body_maze.style.display = "block";
+        body_memory.style.display = "none";
+      } else {
+        console.error("Elementer ikke funnet."); 
+      }
+    }
+
+
+    if (column == 0 & row == 0) {
+        celle_r0_c0.removeChild(img2);
+        const key_position_2 = document.querySelector(".key_position_2");
+        key_position_2.appendChild(img2);
+        const audio=new Audio("Lyder/KeyCollected.mp3");
+        audio.play();
+    }
+
+    if (column == 1 & row == 8) {
+        celle_r2_c8.removeChild(img3);
+        const key_position_3 = document.querySelector(".key_position_3");
+        key_position_3.appendChild(img3);
+        const audio=new Audio("Lyder/KeyCollected.mp3");
+        audio.play();
+    }
+
+    if (allKeysCollected()) {
+        /* Åpner en utgang i celle r.4.c0 når alle nøkler er plukket */
+        const celle_r4_c0 = document.querySelector(".r4.c0");
+        celle_r4_c0.style.borderLeft = "none";
+
+        /* Setter en pil i celle r4.c0 når alle nøkler er plukket */
+        const arrow = document.getElementById("arrow_image");
+        celle_r4_c0.appendChild(arrow);
+        arrow.style.display = "block";
+    }
+
+    if (allKeysCollected() && row == 4 && column == 0) {
+        if (event.key == "ArrowLeft") {
+            endConditionMet = true;
+        }
+    }
+
+    if (endConditionMet) {
+        const gratulerer = document.getElementById("gratulerer");
+        gratulerer.style.display = "block";
+        prikk.style.display = "none";
+
+        const knapp = document.getElementById("knapp");
+        knapp.style.display = "none";
+
+        const keys_abc = document.getElementById("keys_abc");
+        keys_abc.style.display = "none";
+
+        meny.style.display = "none";
+
+    }
 });
 
 
@@ -371,7 +462,7 @@ function myFunctionRoundedSquare() {
 function myFunctionEmoji1() {
 
     prikk.style.fontSize = "40px";
-    prikk.innerHTML = "👳🏿‍♂️";
+    prikk.innerHTML = "⭐️";
     prikk.style.backgroundColor = "transparent";
     circle.style.border = "none";
     square.style.border = "none";
@@ -392,7 +483,7 @@ function myFunctionEmoji1() {
 
 function myFunctionEmoji2() {
     prikk.style.fontSize = "40px";
-    prikk.innerHTML = "👨🏿‍🦽";
+    prikk.innerHTML = "🌮";
     prikk.style.backgroundColor = "transparent";
     circle.style.border = "none";
     square.style.border = "none";
@@ -412,7 +503,7 @@ function myFunctionEmoji2() {
 
 function myFunctionEmoji3() {
     prikk.style.fontSize = "40px";
-    prikk.innerHTML = "🦧";
+    prikk.innerHTML = "🏀";
     prikk.style.backgroundColor = "transparent";
     circle.style.border = "none";
     square.style.border = "none";
@@ -432,7 +523,7 @@ function myFunctionEmoji3() {
 
 function myFunctionEmoji4() {
     prikk.style.fontSize = "40px";
-    prikk.innerHTML = "🤪";
+    prikk.innerHTML = "🚁";
     prikk.style.backgroundColor = "transparent";
     circle.style.border = "none";
     square.style.border = "none";
@@ -452,7 +543,7 @@ function myFunctionEmoji4() {
 
 function myFunctionEmoji5() {
     prikk.style.fontSize = "40px";
-    prikk.innerHTML = "🧑🏿‍🦰";
+    prikk.innerHTML = "🗿";
     prikk.style.backgroundColor = "transparent";
     circle.style.border = "none";
     square.style.border = "none";
@@ -469,5 +560,71 @@ function myFunctionEmoji5() {
     pink.style.border = "none";
     black.style.border = "none";
 }
+
+
+const celle_r8_c8 = document.querySelector(".r8.c8");
+const img1 = document.getElementById("key_image1");
+celle_r8_c8.appendChild(img1);
+
+
+const celle_r0_c0 = document.querySelector(".r0.c0");
+const img2 = document.getElementById("key_image2");
+celle_r0_c0.appendChild(img2); 
+
+const celle_r2_c8 = document.querySelector(".r8.c1");
+const img3 = document.getElementById("key_image3");
+celle_r2_c8.appendChild(img3);
+
+const key1 = document.getElementById("key_image1");
+const key2 = document.getElementById("key_image2");
+const key3 = document.getElementById("key_image3");
+
+function allKeysCollected() {
+    return !maze_container.contains(key1) &&
+        !maze_container.contains(key2) &&
+        !maze_container.contains(key3);
+}
+
+function startNedtelling(varighet, display) {
+    var start = Date.now(),
+    diff,
+    minutter,
+    sekunder;
+    function timer() {
+    // finn antall sekunder mellom nå og start
+    diff = varighet - (((Date.now() - start) / 1000) | 0);
+    
+    // gjør om tiden til minutter og sekunder
+    minutter = (diff / 60) | 0;
+    sekunder = (diff % 60) | 0;
+    
+    minutter = minutter < 10 ? "0" + minutter : minutter;
+    sekunder = sekunder < 10 ? "0" + sekunder : sekunder;
+    
+    // Oppdaterer display-elementet med de nye verdiene
+    display.textContent = minutter + ":" + sekunder; 
+    
+    if (diff <= 0) {
+        
+        
+        // GAME OVER (her må vi fylle inn ett eller annet som skjer når man taper)
+    
+        
+    }
+    };
+    // Oppdaterer klokken hvert sekund
+    timer();
+    var interval = setInterval(timer, 1000);
+    }
+    
+    window.onload = function () {
+    var femMinutter = 60 * 5,
+    display = document.querySelector('#timer'); 
+    startNedtelling(femMinutter, display);
+    };
+    
+let endConditionMet = false;
+
+
 
 
