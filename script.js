@@ -60,19 +60,12 @@ document.addEventListener('keydown', (event) => {
         // const audio=new Audio("Lyder/KeyCollected.mp3");
         //audio.play();
 
-        const body_maze =document.querySelector(".body_maze");
-        body_maze.style.display = "none";
-        
-        const body_portal = document.querySelector(".body_portal");
-        body_portal.style.display = "none";
+        document.querySelector(".body_maze").style.display = "none";
+        document.querySelector(".body_portal").style.display = "none";
+        document.querySelector(".body_memory").style.display = "block";
 
-        const body_memory = document.querySelector(".body_memory");
-        body_memory.style.display = "block";
-
-        const intro=document.querySelector(".intro")
-        intro.style.backgroundImage = "url('img_tree.png')";
-
-
+        //const intro=document.querySelector(".intro")
+        //intro.style.backgroundImage = "url('img_tree.png')";
     }
     
 
@@ -81,18 +74,6 @@ document.addEventListener('keydown', (event) => {
 
     //console.log(teller, kortAvdekket, antallKort); 
     
-   /* if (teller >= 45 && kortAvdekket === antallKort) {
-      const body_maze = document.querySelector(".body_maze");
-      const body_memory = document.querySelector(".body_memory");
-    
-      if (body_maze && body_memory) { 
-        body_maze.style.display = "block";
-        body_memory.style.display = "none";
-      } else {
-        console.error("Elementer ikke funnet."); 
-      }
-    }
-*/
 
     if (column == 0 & row == 0) {
         celle_r0_c0.removeChild(img2);
