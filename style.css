@@ -184,3 +184,7 @@ canvas {
 	background-size: cover;
     height: auto;
 }
+
+.quiz_body{
+    display: none;
+}

@@ -79,8 +79,14 @@ document.addEventListener('keydown', (event) => {
         celle_r0_c0.removeChild(img2);
         const key_position_2 = document.querySelector(".key_position_2");
         key_position_2.appendChild(img2);
-        const audio=new Audio("Lyder/KeyCollected.mp3");
-        audio.play();
+
+        document.querySelector(".body_maze").style.display = "none";
+        document.querySelector(".quiz_body").style.display = "block";
+
+        //const audio=new Audio("Lyder/KeyCollected.mp3");
+        //audio.play();
+
+
     }
 
     if (column == 1 & row == 8) {

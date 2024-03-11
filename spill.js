@@ -28,3 +28,8 @@ function visResultat(poengsum) {
     const resultatContainer = document.getElementById('resultat');
     resultatContainer.innerHTML = `Din poengsum er: ${poengsum} av 5 poeng!`;
 }
+
+/*if(poengsum>=4){
+    document.querySelector(".body_maze").style.display = "block";
+    document.querySelector(".quiz_body").style.display = "none";
+}*/
