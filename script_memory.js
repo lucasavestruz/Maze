@@ -113,4 +113,4 @@ for (let i = 0; i < antallKort; i ++) {
     kortContainer.appendChild(kort);
 }
 
-export { teller, kortAvdekket, antallKort };
+//export { teller, kortAvdekket, antallKort };

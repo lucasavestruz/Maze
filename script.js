@@ -77,11 +77,11 @@ document.addEventListener('keydown', (event) => {
     
 
 
-    import { teller, kortAvdekket, antallKort } from './script_memorys.mjs';
+    //import { teller, kortAvdekket, antallKort } from './script_memorys.mjs';
 
-    console.log(teller, kortAvdekket, antallKort); 
+    //console.log(teller, kortAvdekket, antallKort); 
     
-    if (teller >= 45 && kortAvdekket === antallKort) {
+   /* if (teller >= 45 && kortAvdekket === antallKort) {
       const body_maze = document.querySelector(".body_maze");
       const body_memory = document.querySelector(".body_memory");
     
@@ -92,7 +92,7 @@ document.addEventListener('keydown', (event) => {
         console.error("Elementer ikke funnet."); 
       }
     }
-
+*/
 
     if (column == 0 & row == 0) {
         celle_r0_c0.removeChild(img2);
