@@ -1,10 +1,6 @@
 const kortContainer = document.querySelector(".brett")
-// Genererer 8 tilfeldige farger
-let farger = [];
-for (let i = 0; i < 8; i++) {
-  const tilfeldigFarge = "#" + Math.floor(Math.random() * 16777215).toString(16);
-  farger.push(tilfeldigFarge);
-}
+// Velger de 8 fargene
+let farger = ["#9ECB93", "#FBAF00", "#FFB5C2", "#80A1D4", "#DA2C38", "#FF8427", "#E5DF61", "#FFF9EB"];
 
 const fargeListe = [...farger, ...farger];
 const antallKort = fargeListe.length;
