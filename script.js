@@ -127,6 +127,9 @@ document.addEventListener('keydown', (event) => {
 
         meny.style.display = "none";
 
+        const audio=new Audio("Lyder/vinne.mp3");
+        audio.play();
+
     }
 });
 
@@ -599,9 +602,16 @@ function startNedtelling(varighet, display) {
     if (diff<=8){
         document.querySelector(".ti_sekunder").style.display = "none";
     }
+
+    if (diff==0){
+        const audio=new Audio("Lyder/tape.mp3");
+        audio.play();
+    }
     
     if (diff <= 0) {
         
+        
+
         document.querySelector(".body_maze").style.display = "none";
         document.querySelector(".body_portal").style.display = "none";
         document.querySelector(".body_memory").style.display = "none";
@@ -609,6 +619,7 @@ function startNedtelling(varighet, display) {
         document.body.style.backgroundImage = "none";
         document.querySelector(".tap").style.display = "block";
         document.querySelector(".intro").style.backgroundColor = "black";
+
 
 
         // GAME OVER (her må vi fylle inn ett eller annet som skjer når man taper)
