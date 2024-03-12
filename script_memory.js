@@ -83,6 +83,26 @@ function genererKort(farge) {
             }
 
 
+            if (kortAvdekket === antallKort && teller.innerHTML > 20) {
+                alert("Du greide det ikke:/ Prøv på nytt!");
+            
+                //her tilbakestiller jeg kortene
+                const alleKort = document.querySelectorAll(".kort");
+                alleKort.forEach(kort => {
+                    kort.style.backgroundColor = null;
+                    kort.setAttribute("info-avdekket", "false");
+                });
+            
+                // Nullstill variabler for å restarte gamet
+                kortAvdekket = 0;
+                aktivtKort = null;
+                venterAvslutning = false;
+                trekk = 0;
+                teller.innerHTML = trekk;
+            }
+
+         
+
             return;
 
 
@@ -114,20 +134,4 @@ for (let i = 0; i < antallKort; i++) {
     fargeListe.splice(indeksFarger, 1);
     kortContainer.appendChild(kort);
 }
-
-/*
-if (teller.innerHTML >= 45 && kortAvdekket === antallKort) {
-    const body_maze = document.querySelector(".body_maze");
-    const body_memory = document.querySelector(".body_memory");
-  
-   // if (body_maze && body_memory) { 
-     body_maze.style.display = "block";
-     body_memory.style.display = "none";
-    } else {
-      console.error("Elementer ikke funnet."); 
-    }
-// }*/
-
-
-
 
