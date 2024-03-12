@@ -127,3 +127,7 @@ if (teller.innerHTML >= 45 && kortAvdekket === antallKort) {
       console.error("Elementer ikke funnet."); 
     }
 // }*/
+
+
+
+
