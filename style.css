@@ -108,6 +108,9 @@ canvas {
   .body_quiz {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: royalblue;
+    background-image: url("Bilder/quizBakgrunn.jpg");
+    background-position: center;
+	background-size: cover;
     margin: 0;
     padding: 0;
     display: flex;
@@ -118,8 +121,9 @@ canvas {
 
 .quiz-container {
     max-width: 800px;
-    background-color: #fff;
-    border: 2px solid #ddd;
+    background-color: transparent;
+    backdrop-filter: blur(15px);
+    border: 3px solid #ddd;
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -128,7 +132,8 @@ canvas {
 
 .sporsmal-container {
     padding: 20px;
-    border-bottom: 2px solid #ddd;
+    border-bottom: 3px solid #ddd;
+    color: white;
 }
 
 .sporsmal-container p {
@@ -146,6 +151,7 @@ canvas {
     display: block;
     padding: 10px;
     background-color: #f4f4f4;
+    color: black;
     border: 1px solid #ddd;
     border-radius: 5px;
     cursor: pointer;
@@ -174,6 +180,7 @@ canvas {
 }
 
 .resultat {
+    color: white;
     text-align: center;
     margin-bottom: 20px;
 }
