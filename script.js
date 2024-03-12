@@ -607,10 +607,17 @@ function startNedtelling(varighet, display) {
         const audio=new Audio("Lyder/tape.mp3");
         audio.play();
     }
+
+
+    if (endConditionMet) {
+       
+        clearInterval(interval);
+    }
     
     if (diff <= 0) {
         
-        
+        clearInterval(interval);
+
 
         document.querySelector(".body_maze").style.display = "none";
         document.querySelector(".body_portal").style.display = "none";
@@ -620,12 +627,12 @@ function startNedtelling(varighet, display) {
         document.querySelector(".tap").style.display = "block";
         document.querySelector(".intro").style.backgroundColor = "black";
 
-
-
         // GAME OVER (her må vi fylle inn ett eller annet som skjer når man taper)
-
-        
     }
+
+
+
+    
     };
     // Oppdaterer klokken hvert sekund
     timer();
