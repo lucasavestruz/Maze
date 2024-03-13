@@ -29,6 +29,7 @@
   border-style: solid;
   border-color: black;
   background-color: rgb(72, 29, 29);
+  border-radius: 30%;
 }
 
 .mulvarp {
@@ -37,7 +38,7 @@
 }
 
 .body_muldvarp {
-  background-image: url(gress.png);
+  background-image: url(gress.jpg);
   background-repeat: no-repeat;
   background-size: cover;
 }
