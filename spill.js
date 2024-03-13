@@ -46,9 +46,9 @@ function beregnResultat() {
 
 function visResultat(poengsum) {
     const resultatContainer = document.getElementById('resultat');
-<<<<<<< Updated upstream
-    resultatContainer.innerHTML = `Din poengsum er: ${poengsum} av 5 poeng!`;
-    if(poengsum>=4){
+    resultatContainer.innerHTML = `Din poengsum er: ${poengsum} av 10 poeng!`;
+    
+    if(poengsum>=8){
     alert("Gratulerer! Du besto quizen med "+poengsum+" poeng!")
     document.querySelector(".body_maze").style.display = "block";
     document.querySelector(".quiz_body").style.display = "none";
@@ -60,7 +60,22 @@ function visResultat(poengsum) {
         poengsum=0
     }
 }
-=======
-    resultatContainer.innerHTML = `Din poengsum er: ${poengsum} av 10 poeng!`;
+
+/*
+resultatContainer.innerHTML = `Din poengsum er: ${poengsum} av 5 poeng!`;
+if(poengsum>=4){
+alert("Gratulerer! Du besto quizen med "+poengsum+" poeng!")
+document.querySelector(".body_maze").style.display = "block";
+document.querySelector(".quiz_body").style.display = "none";
+const audio=new Audio("Lyder/KeyCollected.mp3");
+    audio.play();
 }
->>>>>>> Stashed changes
+else{
+    resultatContainer.innerHTML = 'Du besto desverre ikke, men prøv på nytt!';
+    poengsum=0
+}
+}
+=======
+resultatContainer.innerHTML = `Din poengsum er: ${poengsum} av 10 poeng!`;
+}*/
+

@@ -1,3 +1,5 @@
+
+
 const ruter = document.querySelectorAll(".rute")
 const mulvarp = document.querySelector(".mulvarp")
 const tid = document.querySelector("#tid")
@@ -42,8 +44,27 @@ function nedtelling() {
   if (aktivTid == 0) {
     clearInterval(nedtellingTidId)
     clearInterval(tidId)
-    alert('GAME OVER! Din score er: ' + resultat)
+
   }
- }
- 
+if(aktivTid==0 && resultat>=5){
+  alert("Gratulerer! Du besto wack-a-mole med "+resultat+" poeng!")
+    document.querySelector(".body_maze").style.display = "block";
+    document.querySelector(".body_muldvarp").style.display = "none";
+    const audio=new Audio("Lyder/KeyCollected.mp3");
+        audio.play();
+}
+
+if(aktivTid==0 && resultat<5){
+  alert("Du greide det ikke:/ Men prøv igjen!")
+  score.innerHTML = 0
+  resultat=0
+  tilfRute()
+  flyttMulvarp()
+  aktivTid = 20; 
+  tid.innerHTML = aktivTid; 
+  nedtellingTidId = setInterval(nedtelling, 1000);
+}
+
+}
+
  let nedtellingTidId = setInterval(nedtelling, 1000)

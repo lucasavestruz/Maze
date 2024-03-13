@@ -83,18 +83,22 @@ document.addEventListener('keydown', (event) => {
         document.querySelector(".body_maze").style.display = "none";
         document.querySelector(".quiz_body").style.display = "block";
 
-        //const audio=new Audio("Lyder/KeyCollected.mp3");
-        //audio.play();
 
-
+        
     }
 
     if (column == 1 & row == 8) {
         celle_r2_c8.removeChild(img3);
         const key_position_3 = document.querySelector(".key_position_3");
         key_position_3.appendChild(img3);
-        const audio=new Audio("Lyder/KeyCollected.mp3");
-        audio.play();
+
+        document.querySelector(".body_maze").style.display = "none";
+        document.querySelector(".body_muldvarp").style.display = "block";
+
+        
+
+        //const audio=new Audio("Lyder/KeyCollected.mp3");
+        //audio.play();
     }
 
     if (allKeysCollected()) {
