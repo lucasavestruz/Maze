@@ -5,11 +5,11 @@ function beregnResultat() {
         poengsum++;
     }
 
-    if (document.querySelector('input[name="q2"]:checked').value === "B") {
+    if (document.querySelector('input[name="q2"]:checked').value === "D") {
         poengsum++;
     }
 
-    if (document.querySelector('input[name="q3"]:checked').value === "B") {
+    if (document.querySelector('input[name="q3"]:checked').value === "D") {
         poengsum++;
     }
 
@@ -21,11 +21,32 @@ function beregnResultat() {
         poengsum++;
     }
 
+    if (document.querySelector('input[name="q6"]:checked').value === "B") {
+        poengsum++;
+    }
+
+    if (document.querySelector('input[name="q7"]:checked').value === "B") {
+        poengsum++;
+    }
+
+    if (document.querySelector('input[name="q8"]:checked').value === "D") {
+        poengsum++;
+    }
+
+    if (document.querySelector('input[name="q9"]:checked').value === "C") {
+        poengsum++;
+    }
+
+    if (document.querySelector('input[name="q10"]:checked').value === "D") {
+        poengsum++;
+    }
+
     visResultat(poengsum);
 }
 
 function visResultat(poengsum) {
     const resultatContainer = document.getElementById('resultat');
+<<<<<<< Updated upstream
     resultatContainer.innerHTML = `Din poengsum er: ${poengsum} av 5 poeng!`;
     if(poengsum>=4){
     alert("Gratulerer! Du besto quizen med "+poengsum+" poeng!")
@@ -39,3 +60,7 @@ function visResultat(poengsum) {
         poengsum=0
     }
 }
+=======
+    resultatContainer.innerHTML = `Din poengsum er: ${poengsum} av 10 poeng!`;
+}
+>>>>>>> Stashed changes

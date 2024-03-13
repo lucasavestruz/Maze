@@ -1,0 +1,51 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.grid {
+  width: 620px;
+  height: 620px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.rute {
+  height: 200px;
+  width: 200px;
+  border-style: solid;
+  border-color: black;
+  background-color: rgb(72, 29, 29);
+}
+
+.mulvarp {
+  background-image: url("mulvarp.png");
+  background-size: cover;
+}
+
+html {
+  background-image: url(gress.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+h2 {
+  color: whitesmoke;
+  margin-left: 20px;
+}
+
+.tekst {
+  height: 500px;
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  margin-right: 120px;
+  background-color: grey;
+  justify-content: space-evenly;
+  border-style: solid;
+  border-color: grey gray darkgray darkgrey;
+}
