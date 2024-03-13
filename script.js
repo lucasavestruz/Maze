@@ -60,46 +60,33 @@ document.addEventListener('keydown', (event) => {
         // const audio=new Audio("Lyder/KeyCollected.mp3");
         //audio.play();
 
-        const body_maze =document.querySelector(".body_maze");
-        body_maze.style.display = "none";
-        
-        const body_portal = document.querySelector(".body_portal");
-        body_portal.style.display = "none";
-
-        const body_memory = document.querySelector(".body_memory");
-        body_memory.style.display = "block";
-
-        const intro=document.querySelector(".intro")
-        intro.style.backgroundImage = "url('img_tree.png')";
-
-
+        document.querySelector(".body_maze").style.display = "none";
+        document.querySelector(".body_portal").style.display = "none";
+        document.querySelector(".body_memory").style.display = "block";
+        document.querySelector(".intro").style.backgroundImage = "url('Bilder/memorybackground.jpg')";
+        //const intro=document.querySelector(".intro")
+        //intro.style.backgroundImage = "url('img_tree.png')";
     }
     
 
 
-    import { teller, kortAvdekket, antallKort } from './script_memorys.mjs';
+    //import { teller, kortAvdekket, antallKort } from './script_memorys.mjs';
 
-    console.log(teller, kortAvdekket, antallKort); 
+    //console.log(teller, kortAvdekket, antallKort); 
     
-    if (teller >= 45 && kortAvdekket === antallKort) {
-      const body_maze = document.querySelector(".body_maze");
-      const body_memory = document.querySelector(".body_memory");
-    
-      if (body_maze && body_memory) { 
-        body_maze.style.display = "block";
-        body_memory.style.display = "none";
-      } else {
-        console.error("Elementer ikke funnet."); 
-      }
-    }
-
 
     if (column == 0 & row == 0) {
         celle_r0_c0.removeChild(img2);
         const key_position_2 = document.querySelector(".key_position_2");
         key_position_2.appendChild(img2);
-        const audio=new Audio("Lyder/KeyCollected.mp3");
-        audio.play();
+
+        document.querySelector(".body_maze").style.display = "none";
+        document.querySelector(".quiz_body").style.display = "block";
+
+        //const audio=new Audio("Lyder/KeyCollected.mp3");
+        //audio.play();
+
+
     }
 
     if (column == 1 & row == 8) {
@@ -139,6 +126,9 @@ document.addEventListener('keydown', (event) => {
         keys_abc.style.display = "none";
 
         meny.style.display = "none";
+
+        const audio=new Audio("Lyder/vinne.mp3");
+        audio.play();
 
     }
 });
@@ -603,14 +593,46 @@ function startNedtelling(varighet, display) {
     
     // Oppdaterer display-elementet med de nye verdiene
     display.textContent = minutter + ":" + sekunder; 
+
+
+    if (diff<=10){
+        document.querySelector(".ti_sekunder").style.display = "block";
+    }
+
+    if (diff<=8){
+        document.querySelector(".ti_sekunder").style.display = "none";
+    }
+
+    if (diff==0){
+        const audio=new Audio("Lyder/tape.mp3");
+        audio.play();
+    }
+
+
+    if (endConditionMet) {
+       
+        clearInterval(interval);
+    }
     
     if (diff <= 0) {
         
-        
+        clearInterval(interval);
+
+
+        document.querySelector(".body_maze").style.display = "none";
+        document.querySelector(".body_portal").style.display = "none";
+        document.querySelector(".body_memory").style.display = "none";
+        document.querySelector(".quiz_body").style.display = "none";
+        document.body.style.backgroundImage = "none";
+        document.querySelector(".tap").style.display = "block";
+        document.querySelector(".intro").style.backgroundColor = "black";
+
         // GAME OVER (her må vi fylle inn ett eller annet som skjer når man taper)
-    
-        
     }
+
+
+
+    
     };
     // Oppdaterer klokken hvert sekund
     timer();

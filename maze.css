@@ -870,3 +870,9 @@
     margin: 10px;
     width: 43px;
   }
+
+  .p_elm_tap{
+    font-size: 100px;
+    color: darkred;
+    margin: auto;
+  }

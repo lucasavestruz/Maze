@@ -110,6 +110,8 @@
 
         </div>
         <div id="gratulerer" class="gratulerer"> Gratulerer! Du klarte det</div>
+        
+        <div id="ti_sekunder" class="ti_sekunder">10 SEKUNDER IGJEN!</div>
 
         <div class="timer_abc">
             <div class="timer_tekst">Tid igjen:</div>
@@ -120,26 +122,89 @@
 
     <section id="body_memory" class="body_memory">
         <h1 class="overskrift">Memory!</h1>
-        <h3>Kommer snart...</h3>
-        <div class="brettStørrelser">
-            <button class="kommerSnart" onclick="klikk()">4x4 brett</button>
-            <button class="kommerSnart" onclick="klikk2()">5x4 brett</button>
-            <button class="kommerSnart" onclick="klikk3()">6x6 brett</button>
-        </div>
         <div class="main">
             <div class="tellerOversikt">
                 <h2>Antall trekk:</h2>
                 <h4 id="teller">0</h4>
             </div>
             <div class="brett" id="brett"></div>
+            <div class="memory_information"> Klar spillet innen 20 trekk</div>
+            <button id="reset-btn" style="display: none;"> Reset game</button>
         </div>
     </section>
 
+    <section class="quiz_body">
+
+        <section class="body_quiz"> 
+            <div class="quiz-container">
+                <div class="sporsmal-container">
+                    <p>Spørsmål 1: Hva står forkortelsen "HTTP" for?</p>
+                    <div class="alternativer-container">
+                        <label class="alternativ-label"><input type="radio" name="q1" value="A"> A. HyperText Transfer Protocol </label>
+                        <label class="alternativ-label"><input type="radio" name="q1" value="B"> B. High-Tech Transfer Process</label>
+                        <label class="alternativ-label"><input type="radio" name="q1" value="C"> C. Hyperlink and Text Transmission Protocol</label>
+                        <label class="alternativ-label"><input type="radio" name="q1" value="D"> D. Hosted Transfer Protocol</label>
+                    </div>
+                </div>
+        
+                <div class="sporsmal-container">
+                    <p>Spørsmål 2: Hvilket operativsystem utviklet Apple Inc.?</p>
+                    <div class="alternativer-container">
+                        <label class="alternativ-label"><input type="radio" name="q2" value="A"> A. Windows</label>
+                        <label class="alternativ-label"><input type="radio" name="q2" value="B"> B. macOS</label>
+                        <label class="alternativ-label"><input type="radio" name="q2" value="C"> C. Linux</label>
+                        <label class="alternativ-label"><input type="radio" name="q2" value="D"> D. Android</label>
+                    </div>
+                </div>
+        
+                <div class="sporsmal-container">
+                    <p>Spørsmål 3: Hva er formålet med en firewall i datanettverk?</p>
+                    <div class="alternativer-container">
+                        <label class="alternativ-label"><input type="radio" name="q3" value="A"> A. Å forbedre dataytelse </label>
+                        <label class="alternativ-label"><input type="radio" name="q3" value="B"> B. Å beskytte mot uautorisert tilgang</label>
+                        <label class="alternativ-label"><input type="radio" name="q3" value="C"> C. Å øke internett-hastigheten</label>
+                        <label class="alternativ-label"><input type="radio" name="q3" value="D"> D. Å administrere e-posttrafikk</label>
+                    </div>
+                </div>
+        
+                <div class="sporsmal-container">
+                    <p>Spørsmål 4: Hvilket programmeringsspråk ble utviklet av Microsoft og er mye brukt for å lage Windows-applikasjoner?</p>
+                    <div class="alternativer-container">
+                        <label class="alternativ-label"><input type="radio" name="q4" value="A"> A. Python</label>
+                        <label class="alternativ-label"><input type="radio" name="q4" value="B"> B. Java</label>
+                        <label class="alternativ-label"><input type="radio" name="q4" value="C"> C. C#</label>
+                        <label class="alternativ-label"><input type="radio" name="q4" value="D"> D. Ruby</label>
+                    </div>
+                </div>
+        
+                <div class="sporsmal-container">
+                    <p>Spørsmål 5: Hva er en SSD?</p>
+                    <div class="alternativer-container">
+                        <label class="alternativ-label"><input type="radio" name="q5" value="A"> A. System Status Detector</label>
+                        <label class="alternativ-label"><input type="radio" name="q5" value="B"> B. Software Security Database</label>
+                        <label class="alternativ-label"><input type="radio" name="q5" value="C"> C. Super Speed Device</label>
+                        <label class="alternativ-label"><input type="radio" name="q5" value="D"> D. Solid State Drive</label>
+                    </div>
+                </div>
+        
+                <button class="sjekk-resultat-btn" onclick="beregnResultat()">Sjekk resultat</button>
+                <div class="resultat" id="resultat"></div>
+            </div>
+        
+            </section>
+
+    </section>
+
+    <section class="tap">
+        <p class="p_elm_tap">Du Tapte</p>
+    </section>
 
 
     <script src="script.js"></script>
     <script src="index.js"></script>
     <script src="script_memory.js"></script>
+    <script src="spill.js"></script>
+
 </body>
 
 </html>
