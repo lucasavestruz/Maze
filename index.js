@@ -21,10 +21,21 @@ port.addEventListener("click", () => {
         body_maze.style.display = "block";
     }, 1300); 
 
+
+    function startLydAvspilling() {
     setTimeout(() => {
         var audioBakgrunn = new Audio('Lyder/musikkBakgrunn.mp3');
         audioBakgrunn.play();
         audioBakgrunn.loop = true;
-    }, 3000); 
-    
+
+        setTimeout(() => {
+            audioBakgrunn.pause(); 
+            console.log("Lydavspilling stoppet etter 5 minutter.");
+        }, 5 * 60 * 1000); 
+    }, 2000);
+}
+
+startLydAvspilling(); 
+
+  
 })

@@ -634,9 +634,6 @@ function startNedtelling(varighet, display) {
         // GAME OVER (her må vi fylle inn ett eller annet som skjer når man taper)
     }
 
-
-
-    
     };
     // Oppdaterer klokken hvert sekund
     timer();

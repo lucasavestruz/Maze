@@ -1,5 +1,4 @@
 
-
 const ruter = document.querySelectorAll(".rute")
 const mulvarp = document.querySelector(".mulvarp")
 const tid = document.querySelector("#tid")
@@ -9,6 +8,31 @@ let resultat = 0
 let treffPos
 let aktivTid = 20
 let tidId = null
+
+
+
+const observer = new MutationObserver((mutationsList, observer) => {
+  
+  for(const mutation of mutationsList) {
+   
+    if (mutation.attributeName === 'style') {
+      
+      if (window.getComputedStyle(document.querySelector(".body_muldvarp")).display === 'block') {
+       
+        startSpill();
+        
+        observer.disconnect();
+      }
+    }
+  }
+});
+
+
+observer.observe(document.querySelector(".body_muldvarp"), { attributes: true, subtree: true });
+
+
+function startSpill(){
+
 
 function tilfRute() {
   ruter.forEach(rute => {
@@ -46,7 +70,7 @@ function nedtelling() {
     clearInterval(tidId)
 
   }
-if(aktivTid==0 && resultat>=5){
+if(aktivTid==0 && resultat>=25){
   alert("Gratulerer! Du besto wack-a-mole med "+resultat+" poeng!")
     document.querySelector(".body_maze").style.display = "block";
     document.querySelector(".body_muldvarp").style.display = "none";
@@ -54,7 +78,7 @@ if(aktivTid==0 && resultat>=5){
         audio.play();
 }
 
-if(aktivTid==0 && resultat<5){
+if(aktivTid==0 && resultat<25){
   alert("Du greide det ikke:/ Men prøv igjen!")
   score.innerHTML = 0
   resultat=0
@@ -68,3 +92,5 @@ if(aktivTid==0 && resultat<5){
 }
 
  let nedtellingTidId = setInterval(nedtelling, 1000)
+
+}
