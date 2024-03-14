@@ -227,3 +227,12 @@ canvas {
     top: 350px;
     font-family: cursive;
 }
+
+.krav_quiz{
+    align-items: center;
+    margin: auto;
+    color: white;
+    font-size: 20px;
+    position: relative;
+    text-align: center;
+}
