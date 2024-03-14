@@ -20,7 +20,7 @@
   justify-content: space-around;
   margin: auto;
   position: relative;
-  bottom: 400px 
+  bottom: 400px
 }
 
 .rute {
@@ -59,13 +59,13 @@ h2 {
   border: 3px solid black;
   position: relative;
   top: 50px;
-  
+
 }
 
-.body_muldvarp{
+.body_muldvarp {
   display: none;
 }
 
-.slo_mulvarpen_h2{
+.slo_mulvarpen_h2 {
   color: greenyellow;
 }

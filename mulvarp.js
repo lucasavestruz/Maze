@@ -12,15 +12,15 @@ let tidId = null
 
 
 const observer = new MutationObserver((mutationsList, observer) => {
-  
-  for(const mutation of mutationsList) {
-   
+
+  for (const mutation of mutationsList) {
+
     if (mutation.attributeName === 'style') {
-      
+
       if (window.getComputedStyle(document.querySelector(".body_muldvarp")).display === 'block') {
-       
+
         startSpill();
-        
+
         observer.disconnect();
       }
     }
@@ -31,66 +31,66 @@ const observer = new MutationObserver((mutationsList, observer) => {
 observer.observe(document.querySelector(".body_muldvarp"), { attributes: true, subtree: true });
 
 
-function startSpill(){
+function startSpill() {
 
 
-function tilfRute() {
+  function tilfRute() {
+    ruter.forEach(rute => {
+      rute.classList.remove("mulvarp")
+    })
+
+    let tilfRute = ruter[Math.floor(Math.random() * 9)]
+    tilfRute.classList.add("mulvarp")
+
+    treffPos = tilfRute.id
+  }
+
   ruter.forEach(rute => {
-    rute.classList.remove("mulvarp")
+    rute.addEventListener('mousedown', () => {
+      if (rute.id == treffPos) {
+        resultat++
+        score.innerHTML = resultat
+        treffPos = null
+      }
+    })
   })
 
-  let tilfRute = ruter[Math.floor(Math.random() * 9)]
-  tilfRute.classList.add("mulvarp")
+  function flyttMulvarp() {
+    tidId = setInterval(tilfRute, 500)
+  }
 
-  treffPos = tilfRute.id
-}
+  flyttMulvarp()
 
-ruter.forEach(rute => {
-  rute.addEventListener('mousedown', () => {
-    if (rute.id == treffPos) {
-      resultat++
-      score.innerHTML = resultat
-      treffPos = null
+  function nedtelling() {
+    aktivTid--
+    tid.innerHTML = aktivTid
+
+    if (aktivTid == 0) {
+      clearInterval(nedtellingTidId)
+      clearInterval(tidId)
+
     }
-  })
-})
+    if (aktivTid == 0 && resultat >= 15) {
+      alert("Gratulerer! Du besto wack-a-mole med " + resultat + " poeng!")
+      document.querySelector(".body_maze").style.display = "block";
+      document.querySelector(".body_muldvarp").style.display = "none";
+      const audio = new Audio("Lyder/KeyCollected.mp3");
+      audio.play();
+    }
 
-function flyttMulvarp() {
-  tidId = setInterval(tilfRute, 500)
-}
-
-flyttMulvarp()
-
-function nedtelling() {
-  aktivTid--
-  tid.innerHTML = aktivTid
- 
-  if (aktivTid == 0) {
-    clearInterval(nedtellingTidId)
-    clearInterval(tidId)
+    if (aktivTid == 0 && resultat < 15) {
+      alert("Du greide det ikke:/ Men prøv igjen!")
+      score.innerHTML = 0
+      resultat = 0
+      tilfRute()
+      flyttMulvarp()
+      aktivTid = 20;
+      tid.innerHTML = aktivTid;
+      nedtellingTidId = setInterval(nedtelling, 1000);
+    }
 
   }
-if(aktivTid==0 && resultat>=25){
-  alert("Gratulerer! Du besto wack-a-mole med "+resultat+" poeng!")
-    document.querySelector(".body_maze").style.display = "block";
-    document.querySelector(".body_muldvarp").style.display = "none";
-    const audio=new Audio("Lyder/KeyCollected.mp3");
-        audio.play();
-}
 
-if(aktivTid==0 && resultat<25){
-  alert("Du greide det ikke:/ Men prøv igjen!")
-  score.innerHTML = 0
-  resultat=0
-  tilfRute()
-  flyttMulvarp()
-  aktivTid = 20; 
-  tid.innerHTML = aktivTid; 
-  nedtellingTidId = setInterval(nedtelling, 1000);
-}
-
-}
-
- let nedtellingTidId = setInterval(nedtelling, 1000)
+  let nedtellingTidId = setInterval(nedtelling, 1000)
 
 }

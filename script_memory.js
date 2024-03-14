@@ -77,7 +77,7 @@ function genererKort(farge) {
 
                 document.querySelector(".body_maze").style.display = "block";
                 document.querySelector(".body_memory").style.display = "none";
-                const audio=new Audio("Lyder/KeyCollected.mp3");
+                const audio = new Audio("Lyder/KeyCollected.mp3");
                 audio.play();
 
             }
@@ -85,14 +85,14 @@ function genererKort(farge) {
 
             if (kortAvdekket === antallKort && teller.innerHTML > 20) {
                 alert("Du greide det ikke:/ Prøv på nytt!");
-            
+
                 //her tilbakestiller jeg kortene
                 const alleKort = document.querySelectorAll(".kort");
                 alleKort.forEach(kort => {
                     kort.style.backgroundColor = null;
                     kort.setAttribute("info-avdekket", "false");
                 });
-            
+
                 // Nullstill variabler for å restarte gamet
                 kortAvdekket = 0;
                 aktivtKort = null;
@@ -101,7 +101,7 @@ function genererKort(farge) {
                 teller.innerHTML = trekk;
             }
 
-         
+
 
             return;
 

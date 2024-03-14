@@ -52,7 +52,7 @@ document.addEventListener('keydown', (event) => {
     console.log(row, column);
 
     if (column == 8 & row == 8) {
-       
+
         celle_r8_c8.removeChild(img1);
         const key_position_1 = document.querySelector(".key_position_1");
         key_position_1.appendChild(img1);
@@ -67,13 +67,13 @@ document.addEventListener('keydown', (event) => {
         //const intro=document.querySelector(".intro")
         //intro.style.backgroundImage = "url('img_tree.png')";
     }
-    
+
 
 
     //import { teller, kortAvdekket, antallKort } from './script_memorys.mjs';
 
     //console.log(teller, kortAvdekket, antallKort); 
-    
+
 
     if (column == 0 & row == 0) {
         celle_r0_c0.removeChild(img2);
@@ -84,7 +84,7 @@ document.addEventListener('keydown', (event) => {
         document.querySelector(".quiz_body").style.display = "block";
 
 
-        
+
     }
 
     if (column == 1 & row == 8) {
@@ -95,7 +95,7 @@ document.addEventListener('keydown', (event) => {
         document.querySelector(".body_maze").style.display = "none";
         document.querySelector(".body_muldvarp").style.display = "block";
 
-        
+
 
         //const audio=new Audio("Lyder/KeyCollected.mp3");
         //audio.play();
@@ -131,7 +131,7 @@ document.addEventListener('keydown', (event) => {
 
         meny.style.display = "none";
 
-        const audio=new Audio("Lyder/vinne.mp3");
+        const audio = new Audio("Lyder/vinne.mp3");
         audio.play();
 
     }
@@ -143,9 +143,9 @@ function canMoveUp(row, column) {
         return false;
     }
 
-    celle1 = document.querySelector(".r"+row+".c"+column);
+    celle1 = document.querySelector(".r" + row + ".c" + column);
     style = window.getComputedStyle(celle1);
-    if( style.getPropertyValue("border-top-width") != "0px" ) {
+    if (style.getPropertyValue("border-top-width") != "0px") {
         return false;
     }
 
@@ -157,12 +157,12 @@ function canMoveDown(row, column) {
         return false;
     }
 
-    celle1 = document.querySelector(".r"+row+".c"+column);  
-    style = window.getComputedStyle(celle1);    
-    if( style.getPropertyValue("border-bottom-width") != "0px" ) {
+    celle1 = document.querySelector(".r" + row + ".c" + column);
+    style = window.getComputedStyle(celle1);
+    if (style.getPropertyValue("border-bottom-width") != "0px") {
         return false;
     }
-      
+
     return true;
 }
 
@@ -171,9 +171,9 @@ function canMoveLeft(row, column) {
         return false;
     }
 
-    celle1 = document.querySelector(".r"+row+".c"+column)  
+    celle1 = document.querySelector(".r" + row + ".c" + column)
     style = window.getComputedStyle(celle1);
-    if( style.getPropertyValue("border-left-width") != "0px" ) {
+    if (style.getPropertyValue("border-left-width") != "0px") {
         return false;
     }
 
@@ -185,9 +185,9 @@ function canMoveRight(row, column) {
         return false;
     }
 
-    celle1 = document.querySelector(".r"+row+".c"+column);
+    celle1 = document.querySelector(".r" + row + ".c" + column);
     style = window.getComputedStyle(celle1);
-    if( style.getPropertyValue("border-right-width") != "0px" ) {
+    if (style.getPropertyValue("border-right-width") != "0px") {
         return false;
     }
 
@@ -563,7 +563,7 @@ celle_r8_c8.appendChild(img1);
 
 const celle_r0_c0 = document.querySelector(".r0.c0");
 const img2 = document.getElementById("key_image2");
-celle_r0_c0.appendChild(img2); 
+celle_r0_c0.appendChild(img2);
 
 const celle_r2_c8 = document.querySelector(".r8.c1");
 const img3 = document.getElementById("key_image3");
@@ -581,71 +581,71 @@ function allKeysCollected() {
 
 function startNedtelling(varighet, display) {
     var start = Date.now(),
-    diff,
-    minutter,
-    sekunder;
+        diff,
+        minutter,
+        sekunder;
     function timer() {
-    // finn antall sekunder mellom nå og start
-    diff = varighet - (((Date.now() - start) / 1000) | 0);
-    
-    // gjør om tiden til minutter og sekunder
-    minutter = (diff / 60) | 0;
-    sekunder = (diff % 60) | 0;
-    
-    minutter = minutter < 10 ? "0" + minutter : minutter;
-    sekunder = sekunder < 10 ? "0" + sekunder : sekunder;
-    
-    // Oppdaterer display-elementet med de nye verdiene
-    display.textContent = minutter + ":" + sekunder; 
+        // finn antall sekunder mellom nå og start
+        diff = varighet - (((Date.now() - start) / 1000) | 0);
+
+        // gjør om tiden til minutter og sekunder
+        minutter = (diff / 60) | 0;
+        sekunder = (diff % 60) | 0;
+
+        minutter = minutter < 10 ? "0" + minutter : minutter;
+        sekunder = sekunder < 10 ? "0" + sekunder : sekunder;
+
+        // Oppdaterer display-elementet med de nye verdiene
+        display.textContent = minutter + ":" + sekunder;
 
 
-    if (diff<=10){
-        document.querySelector(".ti_sekunder").style.display = "block";
-    }
+        if (diff <= 10) {
+            document.querySelector(".ti_sekunder").style.display = "block";
+        }
 
-    if (diff<=8){
-        document.querySelector(".ti_sekunder").style.display = "none";
-    }
+        if (diff <= 8) {
+            document.querySelector(".ti_sekunder").style.display = "none";
+        }
 
-    if (diff==0){
-        const audio=new Audio("Lyder/tape.mp3");
-        audio.play();
-    }
-
-
-    if (endConditionMet) {
-       
-        clearInterval(interval);
-    }
-    
-    if (diff <= 0) {
-        
-        clearInterval(interval);
+        if (diff == 0) {
+            const audio = new Audio("Lyder/tape.mp3");
+            audio.play();
+        }
 
 
-        document.querySelector(".body_maze").style.display = "none";
-        document.querySelector(".body_portal").style.display = "none";
-        document.querySelector(".body_memory").style.display = "none";
-        document.querySelector(".quiz_body").style.display = "none";
-        document.body.style.backgroundImage = "none";
-        document.querySelector(".tap").style.display = "block";
-        document.querySelector(".intro").style.backgroundColor = "black";
+        if (endConditionMet) {
 
-        // GAME OVER (her må vi fylle inn ett eller annet som skjer når man taper)
-    }
+            clearInterval(interval);
+        }
+
+        if (diff <= 0) {
+
+            clearInterval(interval);
+
+
+            document.querySelector(".body_maze").style.display = "none";
+            document.querySelector(".body_portal").style.display = "none";
+            document.querySelector(".body_memory").style.display = "none";
+            document.querySelector(".quiz_body").style.display = "none";
+            document.body.style.backgroundImage = "none";
+            document.querySelector(".tap").style.display = "block";
+            document.querySelector(".intro").style.backgroundColor = "black";
+
+            // GAME OVER (her må vi fylle inn ett eller annet som skjer når man taper)
+        }
 
     };
     // Oppdaterer klokken hvert sekund
     timer();
     var interval = setInterval(timer, 1000);
-    }
-    
-    window.onload = function () {
+}
+
+window.onload = function () {
     var femMinutter = 60 * 5,
-    display = document.querySelector('#timer'); 
+        display = document.querySelector('#timer');
     startNedtelling(femMinutter, display);
-    };
-    
+};
+
 let endConditionMet = false;
 
 
