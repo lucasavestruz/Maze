@@ -33,12 +33,12 @@
 }
 
 .mulvarp {
-  background-image: url("mulvarp.png");
+  background-image: url("Bilder/mulvarp.png");
   background-size: cover;
 }
 
 .body_muldvarp {
-  background-image: url(gress.jpg);
+  background-image: url("Bilder/gress.jpg");
   background-repeat: no-repeat;
   background-size: cover;
 }
